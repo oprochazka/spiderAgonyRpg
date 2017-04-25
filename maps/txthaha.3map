@@ -1,0 +1,351 @@
+_LObjects = {{
+ ["id"] = 1,
+ ["last_side"] = 1,
+ ["name"] = "brunhilda",
+ ["render_points"] = {
+ [1] = {
+ ["x"] = 15,
+ ["y"] = 11,
+}
+,
+}
+,
+ ["type"] = "dynamic",
+ ["last_point"] = {
+ [1] = {
+ ["x"] = 15,
+ ["y"] = 11,
+}
+,
+}
+,
+ ["bound_box"] = {
+ ["x"] = 928,
+ ["y"] = 84,
+ ["h"] = 92,
+ ["w"] = 144,
+}
+,
+ ["animation"] = {
+ ["frame_time"] = 60,
+ ["key_animation"] = "stay",
+ ["frame"] = 1,
+ ["side"] = 1,
+ ["last_time"] = 32795,
+}
+,
+ ["flags"] = {
+}
+,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 2,
+ ["name"] = 28,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 3,
+ ["name"] = 28,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 4,
+ ["name"] = 28,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 5,
+ ["name"] = 28,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 6,
+ ["name"] = 28,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 7,
+ ["name"] = 28,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 8,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 9,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 10,
+ ["name"] = 15,
+}
+,{
+ ["id"] = 11,
+ ["last_side"] = 1,
+ ["name"] = "spider_green",
+ ["render_points"] = {
+ [1] = {
+ ["x"] = 17,
+ ["y"] = 24,
+}
+,
+}
+,
+ ["type"] = "dynamic",
+ ["last_point"] = {
+ [1] = {
+ ["x"] = 17,
+ ["y"] = 24,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["bound_box"] = {
+ ["x"] = 1024,
+ ["y"] = 292,
+ ["h"] = 92,
+ ["w"] = 142,
+}
+,
+ ["animation"] = {
+ ["frame_time"] = 60,
+ ["key_animation"] = "stay",
+ ["frame"] = 1,
+ ["side"] = 1,
+}
+,
+ ["health"] = 90,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 12,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 13,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 14,
+ ["name"] = 15,
+}
+,{
+ ["id"] = 15,
+ ["last_side"] = 1,
+ ["name"] = "spider_blue",
+ ["render_points"] = {
+ [1] = {
+ ["x"] = 17,
+ ["y"] = 27,
+}
+,
+}
+,
+ ["type"] = "dynamic",
+ ["last_point"] = {
+ [1] = {
+ ["x"] = 17,
+ ["y"] = 27,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["bound_box"] = {
+ ["x"] = 1056,
+ ["y"] = 340,
+ ["h"] = 92,
+ ["w"] = 142,
+}
+,
+ ["animation"] = {
+ ["frame_time"] = 60,
+ ["key_animation"] = "stay",
+ ["frame"] = 1,
+ ["side"] = 1,
+}
+,
+ ["health"] = 50,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 16,
+ ["name"] = 15,
+}
+,{
+ ["id"] = 17,
+ ["last_side"] = 1,
+ ["name"] = "spidermut",
+ ["render_points"] = {
+ [1] = {
+ ["x"] = 14,
+ ["y"] = 28,
+}
+,
+ [2] = {
+ ["x"] = 13,
+ ["y"] = 29,
+}
+,
+ [3] = {
+ ["x"] = 14,
+ ["y"] = 29,
+}
+,
+ [4] = {
+ ["x"] = 14,
+ ["y"] = 30,
+}
+,
+}
+,
+ ["type"] = "dynamic",
+ ["last_point"] = {
+ [1] = {
+ ["x"] = 14,
+ ["y"] = 28,
+}
+,
+ [2] = {
+ ["x"] = 13,
+ ["y"] = 29,
+}
+,
+ [3] = {
+ ["x"] = 14,
+ ["y"] = 29,
+}
+,
+ [4] = {
+ ["x"] = 14,
+ ["y"] = 30,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["bound_box"] = {
+ ["x"] = 832,
+ ["y"] = 320,
+ ["h"] = 128,
+ ["w"] = 201,
+}
+,
+ ["animation"] = {
+ ["frame_time"] = 60,
+ ["key_animation"] = "stay",
+ ["frame"] = 1,
+ ["side"] = 1,
+}
+,
+ ["health"] = 700,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 18,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 19,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 20,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 21,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 22,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 23,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 24,
+ ["name"] = 15,
+}
+,{
+ ["id"] = 25,
+ ["last_side"] = 1,
+ ["name"] = "spider",
+ ["render_points"] = {
+ [1] = {
+ ["x"] = 15,
+ ["y"] = 38,
+}
+,
+}
+,
+ ["type"] = "dynamic",
+ ["last_point"] = {
+ [1] = {
+ ["x"] = 15,
+ ["y"] = 38,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["bound_box"] = {
+ ["x"] = 896,
+ ["y"] = 516,
+ ["h"] = 92,
+ ["w"] = 142,
+}
+,
+ ["animation"] = {
+ ["frame_time"] = 60,
+ ["key_animation"] = "stay",
+ ["frame"] = 1,
+ ["side"] = 1,
+}
+,
+ ["health"] = 30,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 26,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 27,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 28,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 29,
+ ["name"] = 15,
+}
+,}

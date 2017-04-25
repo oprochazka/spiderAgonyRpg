@@ -1,0 +1,4406 @@
+_LObjects = {{
+ ["type"] = "static",
+ ["id"] = 1,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 2,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 3,
+ ["name"] = 17,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 38,
+ ["x"] = 115,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 516,
+ ["x"] = 7296,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 4,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 38,
+ ["x"] = 115,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 5,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 6,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 7,
+ ["name"] = 17,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 46,
+ ["x"] = 114,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 644,
+ ["x"] = 7232,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 8,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 46,
+ ["x"] = 114,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 51,
+ ["x"] = 109,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 724,
+ ["x"] = 6944,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 9,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 51,
+ ["x"] = 109,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 10,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 11,
+ ["name"] = 7,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 12,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 13,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 14,
+ ["name"] = 17,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 55,
+ ["x"] = 99,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_green",
+ ["bound_box"] = {
+ ["y"] = 788,
+ ["x"] = 6304,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 15,
+ ["health"] = 90,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 55,
+ ["x"] = 99,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 55,
+ ["x"] = 116,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 788,
+ ["x"] = 7392,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 16,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 55,
+ ["x"] = 116,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 55,
+ ["x"] = 122,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 788,
+ ["x"] = 7776,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 17,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 55,
+ ["x"] = 122,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 18,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 19,
+ ["name"] = 2,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 56,
+ ["x"] = 100,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_green",
+ ["bound_box"] = {
+ ["y"] = 804,
+ ["x"] = 6336,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 20,
+ ["health"] = 90,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 56,
+ ["x"] = 100,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 21,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 22,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 23,
+ ["name"] = 17,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 57,
+ ["x"] = 100,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_green",
+ ["bound_box"] = {
+ ["y"] = 820,
+ ["x"] = 6368,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 24,
+ ["health"] = 90,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 57,
+ ["x"] = 100,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["slot"] = {
+}
+,
+ ["type"] = "static",
+ ["id"] = 25,
+ ["name"] = 24,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 26,
+ ["name"] = 1,
+}
+,{
+ ["slot"] = {
+ [1] = "ring_of_earth",
+}
+,
+ ["type"] = "static",
+ ["id"] = 27,
+ ["name"] = 24,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 28,
+ ["name"] = 2,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 58,
+ ["x"] = 101,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_green",
+ ["bound_box"] = {
+ ["y"] = 836,
+ ["x"] = 6400,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 29,
+ ["health"] = 90,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 58,
+ ["x"] = 101,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 30,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 31,
+ ["name"] = 2,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 59,
+ ["x"] = 101,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_green",
+ ["bound_box"] = {
+ ["y"] = 852,
+ ["x"] = 6432,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 32,
+ ["health"] = 90,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 59,
+ ["x"] = 101,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 33,
+ ["name"] = 1,
+}
+,{
+ ["slot"] = {
+}
+,
+ ["type"] = "static",
+ ["id"] = 34,
+ ["name"] = 24,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 35,
+ ["name"] = 2,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 60,
+ ["x"] = 102,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_green",
+ ["bound_box"] = {
+ ["y"] = 868,
+ ["x"] = 6464,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 36,
+ ["health"] = 90,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 60,
+ ["x"] = 102,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 37,
+ ["name"] = 2,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 61,
+ ["x"] = 102,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_green",
+ ["bound_box"] = {
+ ["y"] = 884,
+ ["x"] = 6496,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 38,
+ ["health"] = 90,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 61,
+ ["x"] = 102,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["slot"] = {
+ [1] = "ring_of_earth",
+}
+,
+ ["type"] = "static",
+ ["id"] = 39,
+ ["name"] = 24,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 40,
+ ["name"] = 2,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 62,
+ ["x"] = 107,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 900,
+ ["x"] = 6784,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 41,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 62,
+ ["x"] = 107,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 42,
+ ["name"] = 2,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 63,
+ ["x"] = 129,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 916,
+ ["x"] = 8224,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 43,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 63,
+ ["x"] = 129,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["slot"] = {
+}
+,
+ ["type"] = "static",
+ ["id"] = 44,
+ ["name"] = 24,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 45,
+ ["name"] = 2,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 64,
+ ["x"] = 125,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 932,
+ ["x"] = 7936,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 46,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 64,
+ ["x"] = 125,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 47,
+ ["name"] = 2,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 65,
+ ["x"] = 51,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 948,
+ ["x"] = 3232,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 48,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 65,
+ ["x"] = 51,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 65,
+ ["x"] = 118,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 948,
+ ["x"] = 7520,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 49,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 65,
+ ["x"] = 118,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 65,
+ ["x"] = 120,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 948,
+ ["x"] = 7648,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 50,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 65,
+ ["x"] = 120,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 51,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 52,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 53,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 54,
+ ["name"] = 17,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 68,
+ ["x"] = 118,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 996,
+ ["x"] = 7488,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 55,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 68,
+ ["x"] = 118,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 56,
+ ["name"] = 2,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 69,
+ ["x"] = 124,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1012,
+ ["x"] = 7904,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 57,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 69,
+ ["x"] = 124,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 58,
+ ["name"] = 2,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 70,
+ ["x"] = 124,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1028,
+ ["x"] = 7872,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 59,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 70,
+ ["x"] = 124,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 60,
+ ["name"] = 2,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 71,
+ ["x"] = 58,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 1044,
+ ["x"] = 3680,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 61,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 71,
+ ["x"] = 58,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 62,
+ ["name"] = 8,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 72,
+ ["x"] = 96,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 1060,
+ ["x"] = 6080,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 63,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 72,
+ ["x"] = 96,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 72,
+ ["x"] = 118,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1060,
+ ["x"] = 7488,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 64,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 72,
+ ["x"] = 118,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 65,
+ ["name"] = 3,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 73,
+ ["x"] = 130,
+}
+,
+ [2] = {
+ ["y"] = 74,
+ ["x"] = 130,
+}
+,
+ [3] = {
+ ["y"] = 74,
+ ["x"] = 131,
+}
+,
+ [4] = {
+ ["y"] = 75,
+ ["x"] = 130,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spidermut",
+ ["bound_box"] = {
+ ["y"] = 1040,
+ ["x"] = 8288,
+ ["w"] = 201,
+ ["h"] = 128,
+}
+,
+ ["id"] = 66,
+ ["health"] = 700,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 73,
+ ["x"] = 130,
+}
+,
+ [2] = {
+ ["y"] = 74,
+ ["x"] = 130,
+}
+,
+ [3] = {
+ ["y"] = 74,
+ ["x"] = 131,
+}
+,
+ [4] = {
+ ["y"] = 75,
+ ["x"] = 130,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 67,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 68,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 69,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 70,
+ ["name"] = 3,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 76,
+ ["x"] = 63,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 1124,
+ ["x"] = 3968,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 71,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 76,
+ ["x"] = 63,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 76,
+ ["x"] = 118,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1124,
+ ["x"] = 7488,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 72,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 76,
+ ["x"] = 118,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 76,
+ ["x"] = 123,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1124,
+ ["x"] = 7808,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 73,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 76,
+ ["x"] = 123,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 74,
+ ["name"] = 3,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 77,
+ ["x"] = 103,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 1140,
+ ["x"] = 6560,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 75,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 77,
+ ["x"] = 103,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15722,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 77,
+ ["x"] = 118,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1140,
+ ["x"] = 7520,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 76,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 77,
+ ["x"] = 118,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 77,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 78,
+ ["name"] = 3,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 79,
+ ["x"] = 118,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1172,
+ ["x"] = 7520,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 79,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 79,
+ ["x"] = 118,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 80,
+ ["name"] = 3,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 80,
+ ["x"] = 58,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1188,
+ ["x"] = 3648,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 81,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 80,
+ ["x"] = 58,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 82,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 83,
+ ["name"] = 17,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 81,
+ ["x"] = 127,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 1204,
+ ["x"] = 8096,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 84,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 81,
+ ["x"] = 127,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 85,
+ ["name"] = 3,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 82,
+ ["x"] = 119,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1220,
+ ["x"] = 7552,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 86,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 82,
+ ["x"] = 119,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 87,
+ ["name"] = 6,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 88,
+ ["name"] = 3,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 83,
+ ["x"] = 118,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1236,
+ ["x"] = 7520,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 89,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 83,
+ ["x"] = 118,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 90,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 91,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 92,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 93,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 94,
+ ["name"] = 17,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 85,
+ ["x"] = 67,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 1268,
+ ["x"] = 4256,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 95,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 85,
+ ["x"] = 67,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 96,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 97,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 98,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 99,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 100,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 101,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 102,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 103,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 104,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 105,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 106,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 107,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 108,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 109,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 110,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 111,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 112,
+ ["name"] = 3,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 93,
+ ["x"] = 120,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 1396,
+ ["x"] = 7648,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 113,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 93,
+ ["x"] = 120,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 114,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 115,
+ ["name"] = 3,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 94,
+ ["x"] = 55,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1412,
+ ["x"] = 3456,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 116,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 94,
+ ["x"] = 55,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 117,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 118,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 119,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 120,
+ ["name"] = 3,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 96,
+ ["x"] = 48,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1444,
+ ["x"] = 3008,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 121,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 96,
+ ["x"] = 48,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 96,
+ ["x"] = 61,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 1444,
+ ["x"] = 3840,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 122,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 96,
+ ["x"] = 61,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 123,
+ ["name"] = 5,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 97,
+ ["x"] = 42,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1460,
+ ["x"] = 2656,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 124,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 97,
+ ["x"] = 42,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 98,
+ ["x"] = 59,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_green",
+ ["bound_box"] = {
+ ["y"] = 1476,
+ ["x"] = 3712,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 125,
+ ["health"] = 90,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 98,
+ ["x"] = 59,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 99,
+ ["x"] = 78,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_green",
+ ["bound_box"] = {
+ ["y"] = 1492,
+ ["x"] = 4960,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 126,
+ ["health"] = 90,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 99,
+ ["x"] = 78,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 127,
+ ["name"] = 17,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 103,
+ ["x"] = 129,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 1556,
+ ["x"] = 8224,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 128,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 103,
+ ["x"] = 129,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 106,
+ ["x"] = 56,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 1604,
+ ["x"] = 3520,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 129,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 106,
+ ["x"] = 56,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 109,
+ ["x"] = 64,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1652,
+ ["x"] = 4064,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 130,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 109,
+ ["x"] = 64,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 131,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 132,
+ ["name"] = 17,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 113,
+ ["x"] = 43,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1716,
+ ["x"] = 2720,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 133,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 113,
+ ["x"] = 43,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 113,
+ ["x"] = 51,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1716,
+ ["x"] = 3232,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 134,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 113,
+ ["x"] = 51,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 116,
+ ["x"] = 61,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 1764,
+ ["x"] = 3840,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 135,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 116,
+ ["x"] = 61,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 117,
+ ["x"] = 38,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1780,
+ ["x"] = 2400,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 136,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 117,
+ ["x"] = 38,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 137,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 138,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 139,
+ ["name"] = 11,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 140,
+ ["name"] = 12,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 141,
+ ["name"] = 11,
+}
+,{
+ ["slot"] = {
+}
+,
+ ["type"] = "static",
+ ["id"] = 142,
+ ["name"] = 23,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 143,
+ ["name"] = 12,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 144,
+ ["name"] = 11,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 145,
+ ["name"] = 12,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 146,
+ ["name"] = 11,
+}
+,{
+ ["slot"] = {
+ [2] = "heal_potion",
+ [1] = "heal_potion",
+ [3] = "mana_potion",
+ [4] = "sword",
+}
+,
+ ["type"] = "static",
+ ["id"] = 147,
+ ["name"] = 23,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 148,
+ ["name"] = 12,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 149,
+ ["name"] = 11,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 150,
+ ["name"] = 12,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 151,
+ ["name"] = 11,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 128,
+ ["x"] = 57,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_green",
+ ["bound_box"] = {
+ ["y"] = 1956,
+ ["x"] = 3584,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 152,
+ ["health"] = 90,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 128,
+ ["x"] = 57,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 153,
+ ["name"] = 12,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 154,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 155,
+ ["name"] = 11,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 156,
+ ["name"] = 27,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 157,
+ ["name"] = 12,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 129,
+ ["x"] = 87,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 1972,
+ ["x"] = 5536,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 158,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 129,
+ ["x"] = 87,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 159,
+ ["name"] = 11,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 160,
+ ["name"] = 12,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 161,
+ ["name"] = 11,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 162,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 163,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 164,
+ ["name"] = 11,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 165,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 166,
+ ["name"] = 12,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 167,
+ ["name"] = 12,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 168,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 169,
+ ["name"] = 12,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 170,
+ ["name"] = 11,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 135,
+ ["x"] = 70,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 2068,
+ ["x"] = 4448,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 171,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 135,
+ ["x"] = 70,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 172,
+ ["name"] = 12,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 173,
+ ["name"] = 11,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 174,
+ ["name"] = 12,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 175,
+ ["name"] = 11,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 176,
+ ["name"] = 12,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 177,
+ ["name"] = 11,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 178,
+ ["name"] = 12,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 179,
+ ["name"] = 11,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 180,
+ ["name"] = 10,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 181,
+ ["name"] = 11,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 182,
+ ["name"] = 15,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 143,
+ ["x"] = 68,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 2196,
+ ["x"] = 4320,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 183,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 143,
+ ["x"] = 68,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 143,
+ ["x"] = 80,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 2196,
+ ["x"] = 5088,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 184,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 143,
+ ["x"] = 80,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 146,
+ ["x"] = 47,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_green",
+ ["bound_box"] = {
+ ["y"] = 2244,
+ ["x"] = 2944,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 185,
+ ["health"] = 90,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 146,
+ ["x"] = 47,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 146,
+ ["x"] = 64,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 2244,
+ ["x"] = 4032,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 186,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 146,
+ ["x"] = 64,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 187,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 188,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 189,
+ ["name"] = 17,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 155,
+ ["x"] = 53,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 2388,
+ ["x"] = 3360,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 190,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 155,
+ ["x"] = 53,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 191,
+ ["name"] = 17,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 158,
+ ["x"] = 89,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 2436,
+ ["x"] = 5632,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 192,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 158,
+ ["x"] = 89,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 193,
+ ["name"] = 17,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 165,
+ ["x"] = 48,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_green",
+ ["bound_box"] = {
+ ["y"] = 2548,
+ ["x"] = 3040,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 194,
+ ["health"] = 90,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 165,
+ ["x"] = 48,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 172,
+ ["x"] = 78,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 2660,
+ ["x"] = 4928,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 195,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 172,
+ ["x"] = 78,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 173,
+ ["x"] = 51,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 2676,
+ ["x"] = 3232,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 196,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 173,
+ ["x"] = 51,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15723,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 173,
+ ["x"] = 87,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 2676,
+ ["x"] = 5536,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 197,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 173,
+ ["x"] = 87,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15724,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 179,
+ ["x"] = 57,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 2772,
+ ["x"] = 3616,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 198,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 179,
+ ["x"] = 57,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15724,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 180,
+ ["x"] = 64,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 2788,
+ ["x"] = 4032,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 199,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 180,
+ ["x"] = 64,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 200,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 201,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 202,
+ ["name"] = 17,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15724,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 196,
+ ["x"] = 57,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 3044,
+ ["x"] = 3584,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 203,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 196,
+ ["x"] = 57,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 204,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 205,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 206,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 207,
+ ["name"] = 7,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 208,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 209,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 210,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 211,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 212,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 213,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 214,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 215,
+ ["name"] = 28,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 216,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 217,
+ ["name"] = 1,
+}
+,{
+ ["slot"] = {
+}
+,
+ ["type"] = "static",
+ ["id"] = 218,
+ ["name"] = 23,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 219,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 220,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 221,
+ ["name"] = 2,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15724,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 216,
+ ["x"] = 56,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider",
+ ["bound_box"] = {
+ ["y"] = 3364,
+ ["x"] = 3520,
+ ["w"] = 142,
+ ["h"] = 92,
+}
+,
+ ["id"] = 222,
+ ["health"] = 30,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 216,
+ ["x"] = 56,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 223,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 224,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 225,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 226,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 227,
+ ["name"] = 15,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 228,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 229,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 230,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 231,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 232,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 233,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 234,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 235,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 236,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 237,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 238,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 239,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 240,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 241,
+ ["name"] = 28,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 242,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 243,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 244,
+ ["name"] = 3,
+}
+,{
+ ["slot"] = {
+ [1] = "mana_potion",
+ [2] = "heal_potion",
+}
+,
+ ["type"] = "static",
+ ["id"] = 245,
+ ["name"] = 24,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 246,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 247,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 248,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 249,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 250,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 251,
+ ["name"] = 1,
+}
+,{
+ ["slot"] = {
+}
+,
+ ["type"] = "static",
+ ["id"] = 252,
+ ["name"] = 24,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 253,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 254,
+ ["name"] = 3,
+}
+,{
+ ["slot"] = {
+}
+,
+ ["type"] = "static",
+ ["id"] = 255,
+ ["name"] = 23,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 256,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 257,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 258,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 259,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 260,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 261,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 262,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 263,
+ ["name"] = 8,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 264,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 265,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 266,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 267,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 268,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 269,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 270,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 271,
+ ["name"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15724,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 233,
+ ["x"] = 90,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "brunhilda",
+ ["bound_box"] = {
+ ["y"] = 3636,
+ ["x"] = 5728,
+ ["w"] = 144,
+ ["h"] = 92,
+}
+,
+ ["id"] = 272,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 233,
+ ["x"] = 90,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 273,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 274,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 275,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 276,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 277,
+ ["name"] = 6,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 278,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 279,
+ ["name"] = 14,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 280,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 281,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 282,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 283,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 284,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 285,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 286,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 287,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 288,
+ ["name"] = 28,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 289,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 290,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 291,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 292,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 293,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 294,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 295,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 296,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 297,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 298,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 299,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 300,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 301,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 302,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 303,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 304,
+ ["name"] = 8,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 305,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 306,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 307,
+ ["name"] = 1,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15724,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["items"] = {
+ [1] = "mana_potion",
+}
+,
+ ["flags"] = {
+}
+,
+ ["mana"] = 30,
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 242,
+ ["x"] = 95,
+}
+,
+}
+,
+ ["level"] = 1,
+ ["level_points"] = 20,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 242,
+ ["x"] = 95,
+}
+,
+}
+,
+ ["experience"] = 0,
+ ["map_name"] = "result2",
+ ["last_side"] = 1,
+ ["bound_box"] = {
+ ["y"] = 3780,
+ ["x"] = 6016,
+ ["w"] = 57,
+ ["h"] = 92,
+}
+,
+ ["equipment"] = {
+ ["model"] = "model",
+}
+,
+ ["health"] = 30,
+ ["stats"] = {
+ ["strengh"] = 10,
+ ["health"] = 30,
+ ["wisdom"] = 10,
+ ["dexterity"] = 10,
+ ["mana"] = 30,
+ ["attack"] = 10,
+ ["armor"] = 10,
+}
+,
+ ["name"] = "hero",
+ ["type"] = "hero",
+ ["id"] = 308,
+ ["quests"] = {
+ ["in_progress"] = {
+}
+,
+ ["quest_item"] = {
+}
+,
+ ["completed"] = {
+}
+,
+}
+,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 309,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 310,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 311,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 312,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 313,
+ ["name"] = 3,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 314,
+ ["name"] = 13,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 315,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 316,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 317,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 318,
+ ["name"] = 14,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 319,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 320,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 321,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 322,
+ ["name"] = 4,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 323,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 324,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 325,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 326,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 327,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 328,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 329,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 330,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 331,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 332,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 333,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 334,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 335,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 336,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 337,
+ ["name"] = 26,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 338,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 339,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 340,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 341,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 342,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 343,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 344,
+ ["name"] = 5,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 345,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 346,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 347,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 348,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 349,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 350,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 351,
+ ["name"] = 2,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 352,
+ ["name"] = 1,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 353,
+ ["name"] = 5,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 354,
+ ["name"] = 17,
+}
+,{
+ ["type"] = "static",
+ ["id"] = 355,
+ ["name"] = 17,
+}
+,{
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15724,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 265,
+ ["x"] = 111,
+}
+,
+}
+,
+ ["flags"] = {
+}
+,
+ ["name"] = "spider_blue",
+ ["bound_box"] = {
+ ["y"] = 4148,
+ ["h"] = 92,
+ ["w"] = 142,
+ ["x"] = 7072,
+}
+,
+ ["id"] = 356,
+ ["health"] = 50,
+ ["type"] = "dynamic",
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 265,
+ ["x"] = 111,
+}
+,
+}
+,
+ ["last_side"] = 1,
+}
+,}

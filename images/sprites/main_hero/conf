@@ -1,0 +1,27 @@
+main char :
+(left 230)
+(top 40)
+(height_frame 450)
+(width_frame 580)
+
+hair:
+	(left 37)
+	(top 1)
+				(last-width 119)
+				(last-height 92)
+
+trousers:
+(left 25)
+		 	  (top 30) 
+				(width 80)
+				(height 40)
+
+tunic:(left 25)
+		 	  (top 6) 
+				(width 52)
+				(height 52)
+
+boots:(left 15)
+		 	  (top 30) 
+				(width 80)
+				(height 55)

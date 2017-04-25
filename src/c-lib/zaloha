@@ -1,0 +1,30 @@
+
+    SDL_Surface * loadedSurface1 = SDL_ConvertSurfaceFormat(loadedSurface, 
+                                                      SDL_PIXELFORMAT_RGBA8888, 
+                                                      NULL);
+
+    newTexture = SDL_CreateTexture(win->renderer,
+                            SDL_PIXELFORMAT_RGBA8888,
+                            SDL_TEXTUREACCESS_STREAMING,
+                            loadedSurface1->w, loadedSurface1->h);
+    
+    void* pixels = NULL;
+    int pitch = 0;
+
+    SDL_LockTexture(newTexture, &loadedSurface1->clip_rect, &pixels, &pitch);
+
+    memcpy(pixels, loadedSurface1->pixels, (loadedSurface1->pitch * loadedSurface1->h));
+
+    int width   = loadedSurface1->w;
+    int height  = loadedSurface1->h;
+
+    Uint32* pixels32    = (Uint32*)pixels;
+    int     pixelCount  = (pitch / 4) * height;
+
+    Uint32 colorKey     = SDL_MapRGB(loadedSurface1->format, r, g, b);
+    Uint32 transparent  = SDL_MapRGBA(loadedSurface1->format, r, g, b, 0x00);
+
+   
+    printf("there: %d print %d :\n", pixels32[2]);    
+    
+    SDL_UnlockTexture(newTexture);

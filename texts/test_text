@@ -1,0 +1,12 @@
+<size:19><color:180,180,180>Zdravím Mistře,
+
+Jak bych vám mohl pomoci?
+<answer:Potřebuji peníze, měl by jste pro mě úkol?>
+<answer:Zatím nic>
+<question:<color:180,180,180>
+	Venca proch je Kozák! 
+	<answer:To snad nee>
+	<answer:Ano je to pravda odvěká>
+	<question:Žejo ty jsi ten pravý nefalšovaný kozák odpovídat už nemusíš>	
+>
+<question: V tom případě sbohem!>

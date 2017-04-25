@@ -1,0 +1,209 @@
+\hypertarget{audio_8c}{\section{audio.\-c File Reference}
+\label{audio_8c}\index{audio.\-c@{audio.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$lua5.\-2/lua.\-h$>$}\\*
+{\ttfamily \#include $<$lua5.\-2/lauxlib.\-h$>$}\\*
+{\ttfamily \#include $<$lua5.\-2/lualib.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L2/\-S\-D\-L.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L2/\-S\-D\-L\-\_\-image.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L2/\-S\-D\-L2\-\_\-gfx\-Primitives.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L2/\-S\-D\-L\-\_\-mixer.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}main.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}basic\-\_\-shapes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lua\-\_\-func.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}list.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}window.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}core.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}audio.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sound.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{audio_8c_a57cc5668ba4315423339f726ec04decc}{void {\bfseries E\-R\-P\-G\-\_\-\-Audio\-\_\-create} (int frequency, int chunksize, int channels)}\label{audio_8c_a57cc5668ba4315423339f726ec04decc}
+
+\item 
+\hypertarget{audio_8c_a33dac38fffb4fb378fd3899d6e325b23}{void {\bfseries E\-R\-P\-G\-\_\-play\-\_\-audio} ()}\label{audio_8c_a33dac38fffb4fb378fd3899d6e325b23}
+
+\item 
+\hypertarget{audio_8c_aca84644ea27a8c3b7b98c2631559e955}{void {\bfseries E\-R\-P\-G\-\_\-\-Audio\-\_\-set\-\_\-background\-\_\-music} (char $\ast$path)}\label{audio_8c_aca84644ea27a8c3b7b98c2631559e955}
+
+\item 
+\hypertarget{audio_8c_ad3e9273923986207430ea9c636af8c20}{void {\bfseries E\-R\-P\-G\-\_\-\-Audio\-\_\-set\-\_\-volume\-\_\-music} (int volume)}\label{audio_8c_ad3e9273923986207430ea9c636af8c20}
+
+\item 
+\hypertarget{audio_8c_a4c9f67885b6c4c1b55ce8922be0c818b}{void {\bfseries E\-R\-P\-G\-\_\-\-Pause\-\_\-music} ()}\label{audio_8c_a4c9f67885b6c4c1b55ce8922be0c818b}
+
+\item 
+\hypertarget{audio_8c_af47315b79931d8956411ede3fd1f5dc6}{void {\bfseries E\-R\-P\-G\-\_\-\-Resume\-\_\-music} ()}\label{audio_8c_af47315b79931d8956411ede3fd1f5dc6}
+
+\item 
+\hypertarget{audio_8c_a2d656d15846f409da0df8a066c2aa36c}{void {\bfseries E\-R\-P\-G\-\_\-\-Rewind\-\_\-music} ()}\label{audio_8c_a2d656d15846f409da0df8a066c2aa36c}
+
+\item 
+\hypertarget{audio_8c_a0533a6caa7a60e4a75124f61deaeabd3}{int {\bfseries E\-R\-P\-G\-\_\-\-Set\-\_\-music\-\_\-position} (double position)}\label{audio_8c_a0533a6caa7a60e4a75124f61deaeabd3}
+
+\item 
+\hypertarget{audio_8c_a50aa92b83998cbbca0521f1de5d9336d}{void {\bfseries E\-R\-P\-G\-\_\-\-Music\-\_\-stop} ()}\label{audio_8c_a50aa92b83998cbbca0521f1de5d9336d}
+
+\item 
+\hypertarget{audio_8c_a074e22ef240fcaa2ce26a05351b254a6}{void {\bfseries E\-R\-P\-G\-\_\-\-Music\-\_\-fade\-\_\-out} (int ms)}\label{audio_8c_a074e22ef240fcaa2ce26a05351b254a6}
+
+\item 
+\hypertarget{audio_8c_a58b9308052b14b843468cd426d335948}{void {\bfseries E\-R\-P\-G\-\_\-\-Destroy\-\_\-music} ()}\label{audio_8c_a58b9308052b14b843468cd426d335948}
+
+\item 
+\hypertarget{audio_8c_a4725ed71dc356427ac626867b5eb9ab7}{void {\bfseries E\-R\-P\-G\-\_\-\-Destroy\-\_\-audio} (\hyperlink{structERPG__Audio}{E\-R\-P\-G\-\_\-\-Audio} $\ast$audio)}\label{audio_8c_a4725ed71dc356427ac626867b5eb9ab7}
+
+\item 
+int \hyperlink{audio_8c_a554ea0dd81a5f09f2437aacbbdac9f80}{Lib\-\_\-\-Audio} (lua\-\_\-\-State $\ast$L)
+\item 
+int \hyperlink{audio_8c_af8890286fee49a2a3340f249d2e5638e}{Lua\-\_\-\-Audio\-\_\-set\-\_\-background\-\_\-music} (lua\-\_\-\-State $\ast$L)
+\item 
+int \hyperlink{audio_8c_a58f8b95ff94c43004941e60c1854c466}{Lua\-\_\-\-Audio\-\_\-set\-\_\-volume\-\_\-music} (lua\-\_\-\-State $\ast$L)
+\item 
+int \hyperlink{audio_8c_a918bcc0e355b281f9703e109120c1e89}{Lua\-\_\-\-Pause\-\_\-music} (lua\-\_\-\-State $\ast$L)
+\item 
+int \hyperlink{audio_8c_af8603c596a6e1f36e811a5627fcbc6cb}{Lua\-\_\-\-Resume\-\_\-music} (lua\-\_\-\-State $\ast$L)
+\item 
+int \hyperlink{audio_8c_aa9057743a65021a725948ab33d881f89}{Lua\-\_\-\-Rewind\-\_\-music} (lua\-\_\-\-State $\ast$L)
+\item 
+int \hyperlink{audio_8c_a97fcf66d775fe98b37ad0258c40a9575}{Lua\-\_\-\-Set\-\_\-music\-\_\-position} (lua\-\_\-\-State $\ast$L)
+\item 
+int \hyperlink{audio_8c_a35fa93946e3d3e7fb41a6e18daee162a}{Lua\-\_\-\-Music\-\_\-stop} (lua\-\_\-\-State $\ast$L)
+\item 
+int \hyperlink{audio_8c_a66b9ca53cc0a0dc4a0499e14d9f1cbf1}{Lua\-\_\-\-Music\-\_\-fade\-\_\-out} (lua\-\_\-\-State $\ast$L)
+\item 
+int \hyperlink{audio_8c_a17867dea2c4d00ef2ae6292b768e715b}{Lua\-\_\-\-Play\-\_\-\-Music} (lua\-\_\-\-State $\ast$L)
+\item 
+\hypertarget{audio_8c_ad188d44278d1f6e3e006cd5727538d8e}{int {\bfseries Lua\-\_\-stop\-\_\-all\-\_\-sound} (lua\-\_\-\-State $\ast$L)}\label{audio_8c_ad188d44278d1f6e3e006cd5727538d8e}
+
+\item 
+\hypertarget{audio_8c_a3649a20a0214ab90b27e590f7a5d86e5}{int {\bfseries Lua\-\_\-play\-\_\-audio} (lua\-\_\-\-State $\ast$L)}\label{audio_8c_a3649a20a0214ab90b27e590f7a5d86e5}
+
+\item 
+int \hyperlink{audio_8c_a06f0ddae09ec1a25c5e5b6635a501019}{luaopen\-\_\-\-E\-R\-P\-G\-\_\-\-Audio} (lua\-\_\-\-State $\ast$L)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Ondřej $<$ondrej-\/\-H\-P-\/\-Compaq-\/6710b$>$ 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Sat Apr 25 12\-:19\-:29 2015 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{audio_8c_a554ea0dd81a5f09f2437aacbbdac9f80}{\index{audio.\-c@{audio.\-c}!Lib\-\_\-\-Audio@{Lib\-\_\-\-Audio}}
+\index{Lib\-\_\-\-Audio@{Lib\-\_\-\-Audio}!audio.c@{audio.\-c}}
+\subsubsection[{Lib\-\_\-\-Audio}]{\setlength{\rightskip}{0pt plus 5cm}int Lib\-\_\-\-Audio (
+\begin{DoxyParamCaption}
+\item[{lua\-\_\-\-State $\ast$}]{L}
+\end{DoxyParamCaption}
+)}}\label{audio_8c_a554ea0dd81a5f09f2437aacbbdac9f80}
+Create audio \begin{DoxyReturn}{Returns}
+lib\-Audio 
+\end{DoxyReturn}
+\hypertarget{audio_8c_af8890286fee49a2a3340f249d2e5638e}{\index{audio.\-c@{audio.\-c}!Lua\-\_\-\-Audio\-\_\-set\-\_\-background\-\_\-music@{Lua\-\_\-\-Audio\-\_\-set\-\_\-background\-\_\-music}}
+\index{Lua\-\_\-\-Audio\-\_\-set\-\_\-background\-\_\-music@{Lua\-\_\-\-Audio\-\_\-set\-\_\-background\-\_\-music}!audio.c@{audio.\-c}}
+\subsubsection[{Lua\-\_\-\-Audio\-\_\-set\-\_\-background\-\_\-music}]{\setlength{\rightskip}{0pt plus 5cm}int Lua\-\_\-\-Audio\-\_\-set\-\_\-background\-\_\-music (
+\begin{DoxyParamCaption}
+\item[{lua\-\_\-\-State $\ast$}]{L}
+\end{DoxyParamCaption}
+)}}\label{audio_8c_af8890286fee49a2a3340f249d2e5638e}
+Set background music 
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{audio_8c_a58f8b95ff94c43004941e60c1854c466}{\index{audio.\-c@{audio.\-c}!Lua\-\_\-\-Audio\-\_\-set\-\_\-volume\-\_\-music@{Lua\-\_\-\-Audio\-\_\-set\-\_\-volume\-\_\-music}}
+\index{Lua\-\_\-\-Audio\-\_\-set\-\_\-volume\-\_\-music@{Lua\-\_\-\-Audio\-\_\-set\-\_\-volume\-\_\-music}!audio.c@{audio.\-c}}
+\subsubsection[{Lua\-\_\-\-Audio\-\_\-set\-\_\-volume\-\_\-music}]{\setlength{\rightskip}{0pt plus 5cm}int Lua\-\_\-\-Audio\-\_\-set\-\_\-volume\-\_\-music (
+\begin{DoxyParamCaption}
+\item[{lua\-\_\-\-State $\ast$}]{L}
+\end{DoxyParamCaption}
+)}}\label{audio_8c_a58f8b95ff94c43004941e60c1854c466}
+Set volume music 
+\begin{DoxyParams}{Parameters}
+{\em volume} & (min$<$=0-\/ 128$<$=max) \\
+\hline
+\end{DoxyParams}
+\hypertarget{audio_8c_a66b9ca53cc0a0dc4a0499e14d9f1cbf1}{\index{audio.\-c@{audio.\-c}!Lua\-\_\-\-Music\-\_\-fade\-\_\-out@{Lua\-\_\-\-Music\-\_\-fade\-\_\-out}}
+\index{Lua\-\_\-\-Music\-\_\-fade\-\_\-out@{Lua\-\_\-\-Music\-\_\-fade\-\_\-out}!audio.c@{audio.\-c}}
+\subsubsection[{Lua\-\_\-\-Music\-\_\-fade\-\_\-out}]{\setlength{\rightskip}{0pt plus 5cm}int Lua\-\_\-\-Music\-\_\-fade\-\_\-out (
+\begin{DoxyParamCaption}
+\item[{lua\-\_\-\-State $\ast$}]{L}
+\end{DoxyParamCaption}
+)}}\label{audio_8c_a66b9ca53cc0a0dc4a0499e14d9f1cbf1}
+Music fade out 
+\begin{DoxyParams}{Parameters}
+{\em time\-To\-Fade\-Out} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{audio_8c_a35fa93946e3d3e7fb41a6e18daee162a}{\index{audio.\-c@{audio.\-c}!Lua\-\_\-\-Music\-\_\-stop@{Lua\-\_\-\-Music\-\_\-stop}}
+\index{Lua\-\_\-\-Music\-\_\-stop@{Lua\-\_\-\-Music\-\_\-stop}!audio.c@{audio.\-c}}
+\subsubsection[{Lua\-\_\-\-Music\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}int Lua\-\_\-\-Music\-\_\-stop (
+\begin{DoxyParamCaption}
+\item[{lua\-\_\-\-State $\ast$}]{L}
+\end{DoxyParamCaption}
+)}}\label{audio_8c_a35fa93946e3d3e7fb41a6e18daee162a}
+Music stop \hypertarget{audio_8c_a918bcc0e355b281f9703e109120c1e89}{\index{audio.\-c@{audio.\-c}!Lua\-\_\-\-Pause\-\_\-music@{Lua\-\_\-\-Pause\-\_\-music}}
+\index{Lua\-\_\-\-Pause\-\_\-music@{Lua\-\_\-\-Pause\-\_\-music}!audio.c@{audio.\-c}}
+\subsubsection[{Lua\-\_\-\-Pause\-\_\-music}]{\setlength{\rightskip}{0pt plus 5cm}int Lua\-\_\-\-Pause\-\_\-music (
+\begin{DoxyParamCaption}
+\item[{lua\-\_\-\-State $\ast$}]{L}
+\end{DoxyParamCaption}
+)}}\label{audio_8c_a918bcc0e355b281f9703e109120c1e89}
+Pause music \hypertarget{audio_8c_a17867dea2c4d00ef2ae6292b768e715b}{\index{audio.\-c@{audio.\-c}!Lua\-\_\-\-Play\-\_\-\-Music@{Lua\-\_\-\-Play\-\_\-\-Music}}
+\index{Lua\-\_\-\-Play\-\_\-\-Music@{Lua\-\_\-\-Play\-\_\-\-Music}!audio.c@{audio.\-c}}
+\subsubsection[{Lua\-\_\-\-Play\-\_\-\-Music}]{\setlength{\rightskip}{0pt plus 5cm}int Lua\-\_\-\-Play\-\_\-\-Music (
+\begin{DoxyParamCaption}
+\item[{lua\-\_\-\-State $\ast$}]{L}
+\end{DoxyParamCaption}
+)}}\label{audio_8c_a17867dea2c4d00ef2ae6292b768e715b}
+Play music 
+\begin{DoxyParams}{Parameters}
+{\em count\-Repeat} & int(pozition left) int(pozition right)  int(distance) \\
+\hline
+\end{DoxyParams}
+\hypertarget{audio_8c_af8603c596a6e1f36e811a5627fcbc6cb}{\index{audio.\-c@{audio.\-c}!Lua\-\_\-\-Resume\-\_\-music@{Lua\-\_\-\-Resume\-\_\-music}}
+\index{Lua\-\_\-\-Resume\-\_\-music@{Lua\-\_\-\-Resume\-\_\-music}!audio.c@{audio.\-c}}
+\subsubsection[{Lua\-\_\-\-Resume\-\_\-music}]{\setlength{\rightskip}{0pt plus 5cm}int Lua\-\_\-\-Resume\-\_\-music (
+\begin{DoxyParamCaption}
+\item[{lua\-\_\-\-State $\ast$}]{L}
+\end{DoxyParamCaption}
+)}}\label{audio_8c_af8603c596a6e1f36e811a5627fcbc6cb}
+Resume music \hypertarget{audio_8c_aa9057743a65021a725948ab33d881f89}{\index{audio.\-c@{audio.\-c}!Lua\-\_\-\-Rewind\-\_\-music@{Lua\-\_\-\-Rewind\-\_\-music}}
+\index{Lua\-\_\-\-Rewind\-\_\-music@{Lua\-\_\-\-Rewind\-\_\-music}!audio.c@{audio.\-c}}
+\subsubsection[{Lua\-\_\-\-Rewind\-\_\-music}]{\setlength{\rightskip}{0pt plus 5cm}int Lua\-\_\-\-Rewind\-\_\-music (
+\begin{DoxyParamCaption}
+\item[{lua\-\_\-\-State $\ast$}]{L}
+\end{DoxyParamCaption}
+)}}\label{audio_8c_aa9057743a65021a725948ab33d881f89}
+Rewind music \hypertarget{audio_8c_a97fcf66d775fe98b37ad0258c40a9575}{\index{audio.\-c@{audio.\-c}!Lua\-\_\-\-Set\-\_\-music\-\_\-position@{Lua\-\_\-\-Set\-\_\-music\-\_\-position}}
+\index{Lua\-\_\-\-Set\-\_\-music\-\_\-position@{Lua\-\_\-\-Set\-\_\-music\-\_\-position}!audio.c@{audio.\-c}}
+\subsubsection[{Lua\-\_\-\-Set\-\_\-music\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}int Lua\-\_\-\-Set\-\_\-music\-\_\-position (
+\begin{DoxyParamCaption}
+\item[{lua\-\_\-\-State $\ast$}]{L}
+\end{DoxyParamCaption}
+)}}\label{audio_8c_a97fcf66d775fe98b37ad0258c40a9575}
+Position music 
+\begin{DoxyParams}{Parameters}
+{\em distance} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{audio_8c_a06f0ddae09ec1a25c5e5b6635a501019}{\index{audio.\-c@{audio.\-c}!luaopen\-\_\-\-E\-R\-P\-G\-\_\-\-Audio@{luaopen\-\_\-\-E\-R\-P\-G\-\_\-\-Audio}}
+\index{luaopen\-\_\-\-E\-R\-P\-G\-\_\-\-Audio@{luaopen\-\_\-\-E\-R\-P\-G\-\_\-\-Audio}!audio.c@{audio.\-c}}
+\subsubsection[{luaopen\-\_\-\-E\-R\-P\-G\-\_\-\-Audio}]{\setlength{\rightskip}{0pt plus 5cm}int luaopen\-\_\-\-E\-R\-P\-G\-\_\-\-Audio (
+\begin{DoxyParamCaption}
+\item[{lua\-\_\-\-State $\ast$}]{L}
+\end{DoxyParamCaption}
+)}}\label{audio_8c_a06f0ddae09ec1a25c5e5b6635a501019}
+
+\begin{DoxyParams}{Parameters}
+{\em L} & \\
+\hline
+\end{DoxyParams}

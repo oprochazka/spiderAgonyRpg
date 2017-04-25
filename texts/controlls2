@@ -1,0 +1,11 @@
+<size:40><color:100,10,100>Ovládání
+<size:20>
+ <color:10,100,100> Chůze: <color:10,100,10> Držení   <color:100,10,10> Pravé tlačítko myš  <color:10,100,10> směr  <color:100,10,10> Natočení myši
+
+ <color:10,100,100> Boj mečem, rukama:<color:10,100,10> Podržení klávesy <color:100,10,10> Shift <color:10,100,10>dle pozice myši směr útoku<color:100,10,10> levý klik myši  <color:10,100,10> Pro aktivaci útoku
+
+ <color:10,100,100> Boj kouzlo:<color:10,100,10>  Podržení klávesy  <color:100,10,10> Ctrl  <color:10,100,10> dle pozice myši směr útoku  <color:100,10,10> levý klik myši  <color:10,100,10> Pro aktivaci 
+
+ <color:10,100,100> Aktivace lahvičky na životy: <color:10,100,10> Podržení klávesy  <color:100,10,10> S  <color:10,100,10> plus  <color:100,10,10> levý klik myši  <color:10,100,10> pro aktivaci 
+
+ <color:10,100,100> Aktivace lahvičky na manu:  <color:10,100,10>Podržení klávesy  <color:100,10,10> D  <color:10,100,10> plus  <color:100,10,10> levý klik myši  <color:10,100,10> Pro aktivaci

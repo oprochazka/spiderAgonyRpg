@@ -1,0 +1,8 @@
+PATH_LIB = "./lua-engine/"
+PATH_GAME = "./lua-game/"
+PATH_IMAGES = "./images/"
+PATH_SOUNDS = "./sounds/"
+PATH_SPRITES = PATH_IMAGES .. "sprites/"
+PATH_GUI_IMG = PATH_IMAGES .. "gui_elements/"
+PATH_TILES = PATH_IMAGES .. "tiles/"
+PATH_FONTS = "./fonts/"

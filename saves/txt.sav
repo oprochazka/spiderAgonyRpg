@@ -1,0 +1,77 @@
+_HeroObject = {
+ ["animation"] = {
+ ["frame"] = 1,
+ ["frame_time"] = 60,
+ ["last_time"] = 15724,
+ ["key_animation"] = "stay",
+ ["side"] = 1,
+}
+,
+ ["items"] = {
+ [1] = "mana_potion",
+}
+,
+ ["flags"] = {
+}
+,
+ ["mana"] = 30,
+ ["render_points"] = {
+ [1] = {
+ ["y"] = 242,
+ ["x"] = 95,
+}
+,
+}
+,
+ ["level"] = 1,
+ ["level_points"] = 20,
+ ["stats"] = {
+ ["strengh"] = 10,
+ ["health"] = 30,
+ ["wisdom"] = 10,
+ ["dexterity"] = 10,
+ ["mana"] = 30,
+ ["attack"] = 10,
+ ["armor"] = 10,
+}
+,
+ ["last_point"] = {
+ [1] = {
+ ["y"] = 242,
+ ["x"] = 95,
+}
+,
+}
+,
+ ["experience"] = 0,
+ ["map_name"] = "result2",
+ ["last_side"] = 1,
+ ["bound_box"] = {
+ ["y"] = 3780,
+ ["x"] = 6016,
+ ["w"] = 57,
+ ["h"] = 92,
+}
+,
+ ["equipment"] = {
+ ["model"] = "model",
+}
+,
+ ["health"] = 30,
+ ["time"] = 15733,
+ ["name"] = "hero",
+ ["type"] = "hero",
+ ["id"] = 357,
+ ["quests"] = {
+ ["in_progress"] = {
+}
+,
+ ["quest_item"] = {
+}
+,
+ ["completed"] = {
+}
+,
+}
+,
+}

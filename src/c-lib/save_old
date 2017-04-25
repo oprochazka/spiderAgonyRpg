@@ -1,0 +1,50 @@
+//geometry shapes copy to render args ({g_s, g_s, g_s ...}) or (g_s)
+int Lua_copy_geom_to_renderer(lua_State * L)
+{
+  ERPG_Window * window = Lua_check_window(L,1);
+
+  if(!lua_istable(L,2)){
+    ERPG_copy_geom_shape_to_renderer(window,Lua_check_geometry_shape(L,2));
+    return 0;
+  }
+  lua_pushnil(L);
+  while(lua_next(L,2) !=0 ){
+    ERPG_copy_geom_shape_to_renderer(window, Lua_check_geometry_shape(L,-1));
+    lua_pop(L,1);
+  }
+  
+  return 0;
+}
+
+int Lua_copy_text_to_renderer(lua_State * L)
+{
+  ERPG_Window * window = Lua_check_window(L,1);
+
+  if(!lua_istable(L,2)){
+    ERPG_copy_text_to_renderer(window,Lua_check_text_element(L,2));
+    return 0;
+  }
+  lua_pushnil(L);
+  while(lua_next(L,2) !=0 ){
+    ERPG_copy_text_to_renderer(window, Lua_check_text_element(L,-1));
+    lua_pop(L,1);
+  }
+
+  return 0;
+}
+int Lua_copy_frame_text_to_renderer(lua_State * L)
+{
+   ERPG_Window * window = Lua_check_window(L,1);
+   
+  if(!lua_istable(L,2)){
+    ERPG_copy_block_text_to_renderer(window,Lua_check_frame_text(L,2));
+    return 0;
+  }
+  lua_pushnil(L);
+  while(lua_next(L,2) !=0 ){
+    ERPG_copy_block_text_to_renderer(window, Lua_check_frame_text(L,-1));
+    lua_pop(L,1);
+  }
+  
+  return 0;
+}

@@ -1,0 +1,31 @@
+-*- mode: compilation; default-directory: "/home/ondrej/programe/engine-RPG-only-sdl/src/c/" -*-
+Compilation started at Wed Aug 27 15:30:39
+
+make -k 
+gcc -Wall -std=c99 -shared -g -c *.c 
+frame_text.c: In function ‘ERPG_format_text’:
+frame_text.c:79:7: warning: unused variable ‘counter’ [-Wunused-variable]
+frame_text.c: In function ‘ERPG_create_frame_text_texture’:
+frame_text.c:151:31: warning: variable ‘amask’ set but not used [-Wunused-but-set-variable]
+frame_text.c:151:24: warning: variable ‘bmask’ set but not used [-Wunused-but-set-variable]
+frame_text.c:151:17: warning: variable ‘gmask’ set but not used [-Wunused-but-set-variable]
+frame_text.c:151:10: warning: variable ‘rmask’ set but not used [-Wunused-but-set-variable]
+frame_text.c:148:17: warning: unused variable ‘surface’ [-Wunused-variable]
+frame_text.c:136:11: warning: unused variable ‘node3’ [-Wunused-variable]
+frame_text.c: In function ‘italic_text’:
+frame_text.c:42:1: warning: control reaches end of non-void function [-Wreturn-type]
+frame_text.c: In function ‘normal_text’:
+frame_text.c:37:1: warning: control reaches end of non-void function [-Wreturn-type]
+frame_text.c: In function ‘bold_text’:
+frame_text.c:33:1: warning: control reaches end of non-void function [-Wreturn-type]
+frame_text.c: In function ‘change_color’:
+frame_text.c:25:1: warning: control reaches end of non-void function [-Wreturn-type]
+main.c: In function ‘main’:
+main.c:294:4: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat]
+main.c:223:26: warning: unused variable ‘line’ [-Wunused-variable]
+main.c:205:26: warning: unused variable ‘polygon’ [-Wunused-variable]
+main.c:169:15: warning: variable ‘rectangle2’ set but not used [-Wunused-but-set-variable]
+main.c:168:15: warning: variable ‘rectangle’ set but not used [-Wunused-but-set-variable]
+gcc *.o -o ./../../bin/engine -lSDL2 -lSDL2_image -lSDL2_ttf -llua5.2 -lpng -lSDL2_gfx -lm 
+
+Compilation finished at Wed Aug 27 15:30:41

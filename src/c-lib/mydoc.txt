@@ -1,0 +1,289 @@
+Light weight Documentation
+
+----------------------------------------------------
+C Documentation
+----------------------------------------------------
+
+ERPG_create_core() return core
+
+ERPG_Audio_create(int frequence, int chunkSize, int channel)
+
+ERPG_make_window(const char * windowName)
+
+ERPG_get_core() return core
+
+Lua_prepare(luaL_State * luaThread)
+
+Lua_update(luaL_State * luaThread)
+
+ERPG_Destroy_core()
+destroy core
+
+----------------------------------------------------
+Lua Documentation
+----------------------------------------------------
+----------------------------------------------------
+Module ERPG_Window
+
+prepare_renderer()
+
+update_renderer()
+
+set_resolution(width, height)
+
+set_filter(red,green,blue,alpha)
+
+toggle_fullscreen()
+
+show_cursor(option(1=show, 0=hide))
+
+get_desktop_resolution() return width, height
+
+get_mouse_position() return x,y
+
+start_input_text()
+
+stop_input_text()
+
+----------------------------------------------------
+mouse
+
+mouse.x
+
+mouse.y
+
+mouse.press
+
+mouse.press_motion
+
+mouse.release
+
+mouse.on_press
+
+mouse.wheel_y
+
+----------------------------------------------------
+keyboard
+
+keyboard.press
+
+keyboard.input_key
+
+keyboard.release
+
+----------------------------------------------------
+Module ERPG_Audio
+
+update_mixer()
+
+set_background_music( pathToMusic )
+
+set_volume_music( volume )
+
+set_pause_music()
+
+resume_music()
+
+rewind_music()
+
+set_music_position()
+
+music_stop()
+
+music_fade_out()
+
+play_music()
+
+stop_all_sound()
+
+----------------------------------------------------
+Class ERPG_Sound
+
+Constructor:
+-------------
+make( pathToAudio )
+
+Methods:
+-------------
+pause()
+
+resume()
+
+stop()
+
+copy_to_mixer()
+
+get_volume() return volume
+
+set_volume(volume)
+
+set_fade( time )
+
+set_fade_out( time )
+
+set_timed( time(ms) )
+
+set_timed_out( time(ms) )
+
+set_distance( distance )
+
+set_position( right, left )
+
+set_repeat( countRepeat(-1 = inf))
+
+----------------------------------------------------
+Class ERPG_Sprite
+
+Constructor:
+-------------
+make(pathToImage, AlphaColor)
+
+compose_textures(tableOfGraphicObjects, width, height)
+
+duplicite(sprite)
+
+Methods:
+-------------
+
+move(x, y)
+
+copy_to_renderer()
+
+scale(width, height)
+
+set_clips(clipsx, clipsy)
+
+set_clip(clipx, clipy)
+
+set_alpha( alpha )
+
+get_alpha() return alpha
+
+set_modulation_color(r,g,b,a, mode)
+
+get_pixel_color(x,y)
+
+get_width_height() return widht, height
+
+get_position_rect()  return rectangle as {"x" = x, "y" = y, "w" = w, "h" = h}
+
+set_size( x, y, w, h )
+Crop from source
+
+get_size() return rectangle as {"x" = x, "y" = y, "w" = w, "h" = h}
+
+get_max_size() return rectangle as {"x" = x, "y" = y, "w" = w, "h" = h}
+
+set_position(x,y)
+
+get_position() return x,y
+
+get_clip_size() return rectangle as {"x" = x, "y" = y, "w" = w, "h" = h}
+
+unload_texture(sprite)
+
+get_current_size() rectangle as {"x" = x, "y" = y, "w" = w, "h" = h}
+
+----------------------------------------------------
+Class ERPG_Rectangle
+
+Constructor:
+-------------
+make_rectangle(rectangle as {x,y,w,h}, color as {r,g,b,a})
+Fill rectangle
+
+make_empty_rectangle(rectangle as {x,y,w,h}, color as {r,g,b,a})
+
+
+Methods:
+-------------
+move(x, y)
+
+copy_to_renderer()
+
+get_position() return x, y
+
+get_rect() return current_rect
+
+set_color(r,g,b,a)
+
+scale(width, height)
+
+set_size(x, y, width, height)
+Crop from source
+
+get_size() return width, height
+
+set_position(x,y)
+
+get_width_height() return width, height
+
+----------------------------------------------------
+Class ERPG_Line
+
+Constructor:
+-------------
+make_line( position as {x1,y1,x2,y2}, color as {r,g,b,a})
+
+Methods:
+-------------
+copy_to_renderer()
+
+move(x, y)
+
+scale(width, height)
+
+set_color(r,g,b,a)
+
+----------------------------------------------------
+Class ERPG_Text_Element
+
+Constructor:
+-------------
+make_text()
+
+Methods:
+-------------
+move(x, y)
+
+scale(width, height)
+
+copy_to_renderer()
+
+change_color(r, g, b, a)
+
+change_string( string )
+
+change_font( pathToFont )
+
+change_size( size )
+
+set_style( (0=Bold, 1 = Italic, 2= Normall))
+
+get_position() return x, y
+
+set_color_modulation(r, g, b, a, mode)
+
+set_alpha( alpha(0-255) )
+
+set_size( x, y, w, h )
+Crop from source
+
+set_position(x, y)
+
+get_size() return rectangle as {"x" = x, "y" = y, "w" = w, "h" = h}
+
+Independent functions:
+
+get_size()
+
+----------------------------------------------------
+Modul ERPG_Utils
+
+get_time() return time
+
+delay( freeze )
+
+intersect_rect( rect1, rect2) return intersectRect, ifIntersect(0 or 1)
+
+get_files_dir( directory ) return tableOfFiles
