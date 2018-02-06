@@ -344,14 +344,15 @@ int Lua_stop_input_text(lua_State * L)
  */
 int Lua_prepare( lua_State * L)
 {
- ERPG_Window * win = get_window();
+
+  ERPG_Window * win = get_window();
   ERPG_Mouse * mouse = win->mouse;
   ERPG_Keyboard * keyboard = win->keyboard;
   CNode * node;
   char * input_text = NULL;
   
   remove_clist(keyboard->release_key);
-  //  remove_clist(win->keyboard->press_key);
+
   mouse->button->release = "none";
   mouse->button->on_press = "none";
   mouse->wheel->wheel_y = 0;
@@ -365,8 +366,11 @@ int Lua_prepare( lua_State * L)
     }
   }
 
-  
-  SDL_RenderClear(win->renderer);
+  int prepareTime = SDL_GetTicks();
+    SDL_RenderClear(win->renderer);
+  if (SDL_GetTicks() - prepareTime > 20)
+    printf("callling: %d \n", SDL_GetTicks() - prepareTime);
+
   lua_newtable(L);
   setfield(L,"x", mouse->x);
   setfield(L,"y", mouse->y);

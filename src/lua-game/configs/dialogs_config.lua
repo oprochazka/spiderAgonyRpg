@@ -25,8 +25,8 @@ local function is_kill_monster(hero)
    end
 end
 local function accept_quest(hero)
-   hero:add_item("sword")
-   hero:add_item("heal_potion")     
+   hero:addItemByName("sword")
+   hero:addItemByName("heal_potion")     
    hero:add_text_event("Dokončil jsi úkol: Odevdej 5 předmětů")
    hero:complete_quest("KillMonster")
    

@@ -9,15 +9,18 @@ OUT_DIR=./../game/
 OUT=engine
 OBJS=*.o
 CC=gcc
+ODIR=build
+SDIR=
 # ... Pro aktualizaci knihovny nejdříve make lib a potom make install
 makebin:
-	$(CC) $(CFLAGS) -c *.c 
+	$(CC) $(CFLAGS) -c *.c
 	rm ./../c-game/libcerpg_engine.a
-	ar -cvq ./../c-game/libcerpg_engine.a *.o 	
+	ar -cvq ./../c-game/libcerpg_engine.a *.o
+	make clean
 lib:
 	$(CC) -o main.so *.c $(CFLAGS) $(CLIBS) -L$(LIBPNG_LIBDIR) -I$(LIBPNG_INCDIR)
 install:
 	mkdir -p $(LUA_LIBDIR)
 	cp main.so $(LUA_LIBDIR)
-
-	
+clean:
+	rm -f *.o

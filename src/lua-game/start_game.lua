@@ -16,9 +16,9 @@ GameStarter = require(PATH_GAME .. "in_game")
 _DELAY = 10
 _LAST_TIME = 0
 _FRAMES = 0
-_GC_STEP = 100
+_GC_STEP = 10000
 --collectgarbage(*ever*)
---collectgarbage("stop")
+collectgarbage("stop")
 
 local main_window_iter = GUI.create_window(game_main, on_load)
 

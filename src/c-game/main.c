@@ -104,26 +104,31 @@ int main(int argc, char ** argv)
       gc_step = 40;
 
     lua_pop(L,1);
-
     testing(L,again);
- 
-   // mesure = SDL_GetTicks();
+
+    int renderTime = SDL_GetTicks();
     Lua_update(L);
- 		//printf("mesure: %d \n",  SDL_GetTicks() - mesure ); 
-    
+
+    if(SDL_GetTicks() - renderTime > 20)
+      printf("time delay: %d \n", SDL_GetTicks() - renderTime);
+ 
+
     if (last_delay < 1000) {
       last_delay = 0;
     }
 
     delay = delay + last_delay;
     set_delay = delay-(SDL_GetTicks() - currenttime);    
+
+    int timeProof = SDL_GetTicks();
+
     int time = 0;
     if(set_delay > 0){      
       time = SDL_GetTicks();
       int test_time = SDL_GetTicks() - time;
       while(test_time < (set_delay - 3))
       {
-        lua_gc(L, LUA_GCSTEP, 0);
+        lua_gc(L, LUA_GCSTEP, gc_step);
         test_time = SDL_GetTicks() - time;
       }
           
@@ -144,6 +149,8 @@ int main(int argc, char ** argv)
       }
       iter = iter + 1;       
     }
+    if(SDL_GetTicks() - timeProof > 10)
+      printf("time garbbage: %d \n", SDL_GetTicks() - timeProof);
     
     lua_pushnumber(L,time);
     lua_setglobal(L,"_LAST_DELAY");

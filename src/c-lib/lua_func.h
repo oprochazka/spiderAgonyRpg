@@ -6,5 +6,7 @@ Sint16* Lua_get_sint16_from_table(lua_State * L,int index, int size_table);
 SDL_Color *Lua_get_color(lua_State * L,int index);
 int setfield (lua_State *L, const char *index, int value);
 int rect_to_table(lua_State * L, SDL_Rect * rect);
+SDL_Rect Lua_from_create_rect_static(lua_State * L, int index);
+
 #endif
 

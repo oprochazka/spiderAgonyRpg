@@ -38,7 +38,7 @@ function AI.smart_inteligence(self)
    end
 
    if enemy.health <= 0 then 
-      self:move("move_" .. hash2[math.random(#hash2)](self)) return 
+      self:move("move_" .. hash2[math.random(#hash2)]) return 
    end
 
    local side = ""

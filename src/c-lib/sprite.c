@@ -15,6 +15,55 @@
 //dovolit změnit nastavit paletu
 //ještě zkusit o vytvoření většího surfacu z několika obrazku a zakomponovat to do engine
 
+ERPG_Sprite* ERPG_create_target_texture(SDL_Texture * texture)
+{
+	int tmp_w = 0;
+	int tmp_h = 0;
+	ERPG_Window * win = ERPG_get_Window();
+
+	ERPG_Sprite * s = (ERPG_Sprite*)malloc(sizeof(ERPG_Sprite));
+	s->src.x = 0;
+	s->src.y = 0;
+	s->duplicite = SDL_FALSE;
+	s->destination.x = 0;
+	s->destination.y = 0;
+	s->act_clip_x = 0;
+	s->act_clip_y = 0;
+	s->count_clips_x = 1;
+	s->count_clips_y = 1;
+	s->path = "tempt";
+	s->rectangles = NULL;
+	s->texture = texture;
+	s->surface_clip_rect = NULL;
+	SDL_QueryTexture(s->texture, NULL, NULL, &tmp_w,&tmp_h);
+	s->src.w = tmp_w;
+	s->src.h = tmp_h;
+	s->destination.w = tmp_w;
+	s->destination.h = tmp_h;
+	s->color_modulate.r = 255;
+	s->color_modulate.g = 255;
+	s->color_modulate.b = 255;
+	s->alpha = 255;
+	s->mode = 1;
+	s->compose = SDL_TRUE;
+	s->angle = 0;
+
+	SDL_SetRenderTarget(win->renderer, NULL);
+
+	return s;
+}
+
+void ERPG_prepare_target_texture(SDL_Texture* texture)
+{
+	ERPG_Window * win = ERPG_get_Window();
+
+	SDL_SetRenderTarget(win->renderer, texture);
+
+	SDL_RenderFillRect(win->renderer,NULL);
+	SDL_RenderCopy(win->renderer,texture,NULL,NULL);
+	SDL_SetRenderDrawColor(win->renderer, 0,0, 0,255);
+}
+
 SDL_Surface * load_surface(char * path)
 {
   SDL_Surface* loadedSurface = NULL;
@@ -162,7 +211,7 @@ ERPG_Sprite * ERPG_make_sprite(char * path ,SDL_Color * color,
   destination.h = h;
 
   s->destination = destination;
-
+  s->angle = 0;
   s->act_clip_x = 0;
   s->act_clip_y = 0;
 
@@ -319,6 +368,13 @@ void ERPG_sprite_destroy(ERPG_Sprite * sprite)
   // free(sprite->path);
 }
 
+
+void ERPG_destroy_whole_sprite(ERPG_Sprite * sprite)
+{
+	SDL_DestroyTexture(sprite->texture);
+	ERPG_sprite_destroy(sprite);
+}
+
 SDL_Color * ERPG_find_pixel_color(SDL_Surface *loadedSurface, int x, int y)
 {
     SDL_PixelFormat *fmt;
@@ -435,8 +491,19 @@ void ERPG_copy_sprite_to_renderer(ERPG_Sprite *sprite)
   
   if(sprite->texture){
     ERPG_set_blend_mode(sprite->texture, sprite->mode);
-    if(SDL_RenderCopy(window->renderer, sprite->texture, &r_src, &r_dest))
-      SDL_GetError();
+
+    if(sprite->angle)
+    {
+	    SDL_RendererFlip flip = SDL_FLIP_HORIZONTAL | SDL_FLIP_VERTICAL;
+       SDL_Point point = {r_src.w /2, r_src.h /2};
+       if(SDL_RenderCopyEx(window->renderer, sprite->texture, &r_src,
+                        &r_dest, sprite->angle + 180 , &point, flip))
+	       SDL_GetError();
+    }
+    else{
+	    if(SDL_RenderCopy(window->renderer, sprite->texture, &r_src, &r_dest))
+		    SDL_GetError();
+    }
   }
   ERPG_set_blend_mode(sprite->texture, 1);
   SDL_SetTextureColorMod( sprite->texture, 255, 255, 255 );
@@ -569,7 +636,7 @@ int Lua_create_new_texture(lua_State * L)
   s->color_modulate.r = 255;
   s->color_modulate.g = 255;
   s->color_modulate.b = 255;
-
+	s->angle = 0;
   s->alpha = 255;
   
   s->mode = 1;
@@ -647,7 +714,8 @@ int Lua_get_target_sprite(lua_State * L)
   s->color_modulate.b = 255;
 
   s->alpha = 255;
-  
+	s->angle = 0;
+
   s->mode = 1;
   s->compose = SDL_TRUE;
   
@@ -1065,6 +1133,17 @@ int Lua_get_size(lua_State * L)
    
   return 1;
 }
+
+int Lua_set_rotate_sprite(lua_State * L)
+{
+  ERPG_Sprite * sprite = Lua_check_sprite(L, 1);
+  float angle = luaL_checknumber(L, 2);
+
+  sprite->angle = angle;
+
+  return 0;
+}
+
 /**
  * Sprite get size of clip
  * @param  sprite
@@ -1185,6 +1264,7 @@ int luaopen_ERPG_sprite(lua_State * L)
   static const luaL_Reg method[] = {
     {"move", &Lua_move_sprite},
     {"copy_to_renderer", Lua_copy_sprite_to_renderer},
+    {"rotate", Lua_set_rotate_sprite},
     {"scale", &Lua_scale_sprite},
     {"set_clips", &Lua_set_clips_sprite},
     {"set_rects_clips", &Lua_set_rects_clips_sprite},

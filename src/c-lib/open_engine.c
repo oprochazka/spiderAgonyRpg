@@ -18,6 +18,9 @@
 #include"rectangle.h"
 #include"network.h"
 #include"server_network.h"
+#include "scene_layer.h"
+#include "static_object.h"
+
 /**
  * Open ERPG libraries
  */
@@ -33,6 +36,8 @@ int luaopen_main(lua_State *L) {
     {"ERPG_Frame_text", luaopen_ERPG_Frame_text},
     {"ERPG_Audio", luaopen_ERPG_Audio},
     {"ERPG_Sound", luaopen_ERPG_Sound},
+    {"ERPG_Scene", luaopen_ERPG_Scene},
+    {"ERPG_StaticObject", luaopen_ERPG_Static_object}
     {NULL, NULL}
     };
     
@@ -50,6 +55,8 @@ int luaopen_main(lua_State *L) {
   luaL_requiref(L, "ERPG_Rectangle", luaopen_ERPG_Rectangle, 1);
   luaL_requiref(L, "ERPG_Network", luaopen_ERPG_Network, 1);
   luaL_requiref(L, "ERPG_Network_server", luaopen_ERPG_Network_server, 1);
+  luaL_requiref(L, "ERPG_Scene", luaopen_ERPG_scene, 1);
+  luaL_requiref(L, "ERPG_StaticObject", luaopen_ERPG_Static_object, 1);
 		
   return 0;
 }

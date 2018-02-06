@@ -26,6 +26,25 @@ SDL_Rect * Lua_from_create_rect(lua_State * L, int index)
   return rectangle;
 }
 
+SDL_Rect Lua_from_create_rect_static(lua_State * L, int index)
+{
+  int temp_array[4];
+
+  SDL_Rect rectangle;
+  if(lua_istable(L,index)){
+
+    lua_pushnil(L);
+    for(int i = 0; lua_next(L, index) != 0; i++){
+      temp_array[i] = luaL_checkinteger(L,-1);
+      lua_pop(L,1);
+    }
+    rectangle.x = temp_array[0];
+    rectangle.y = temp_array[1];
+    rectangle.w = temp_array[2];
+    rectangle.h = temp_array[3];
+  }
+  return rectangle;
+}
 
 Sint16* Lua_get_sint16_from_table(lua_State * L,int index, int size_table)
 {
