@@ -234,6 +234,7 @@ void ERPG_Destroy_window()
     SDL_DestroyTexture(tmp->texture);
     SDL_FreeSurface(tmp->surface);
     free_list = free_list->next;
+    free(tmp);
   }
   destroy_list(window->list_of_sprite);
   free(window->list_of_sprite); 

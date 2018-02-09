@@ -11,15 +11,24 @@ typedef struct ERPG_Static_object{
 	ERPG_Sprite * sprite;
 	SDL_Rect bound_box;
 	int lua_registry;
+	int lua_object_ref;
+	int lua_sprite_ref;
+	int layer;
 }ERPG_Static_object;
 
-ERPG_Static_object* ERPG_make_static_object();
+ERPG_Static_object* ERPG_so_make();
 
-void ERPG_set_id_so(ERPG_Static_object * static_object, int id);
+void ERPG_so_set_id(ERPG_Static_object *static_object, int id);
 
-void ERPG_set_sprite_so(ERPG_Static_object* static_object, ERPG_Sprite * sprite);
+void ERPG_so_set_bound_box(ERPG_Static_object *static_object, SDL_Rect bound_box);
 
-void ERPG_destroy_so(ERPG_Static_object * static_object);
+void ERPG_so_set_sprite(ERPG_Static_object *static_object, ERPG_Sprite *sprite);
+
+void ERPG_so_destroy(ERPG_Static_object *static_object);
+
+void Lua_static_object_unref(lua_State* L, ERPG_Static_object* static_object);
+
+ERPG_Static_object * Lua_Static_object_check(lua_State * L, int i);
 
 int luaopen_ERPG_Static_object(lua_State * L);
 

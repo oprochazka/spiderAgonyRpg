@@ -10,8 +10,23 @@
 #include "sprite.h"
 #include"core.h"
 #include "lua_func.h"
+#include "list.h"
 
-ERPG_Scene * ERPG_make_scene()
+static CList* collision_iter = NULL;
+static CNode* collision_node;
+static int collision_element = 0;
+
+SDL_Texture* ERPG_scene_load_texture(ERPG_Scene *scene, int width, int height);
+
+ERPG_Static_object* get_static_object(Node* node)
+{
+	if(node)
+		return (ERPG_Static_object*)node->value;
+
+	return NULL;
+}
+
+ERPG_Scene * ERPG_scene_make()
 {
 	ERPG_Scene * scene = (ERPG_Scene*)malloc(sizeof(ERPG_Scene));
 
@@ -24,15 +39,26 @@ ERPG_Scene * ERPG_make_scene()
 	scene->boundBoxSize =boundBox;
 	scene->sizeWidth = 1;
 	scene->sizeHeight = 1;
-	scene->target = NULL;
+	scene->target=ERPG_scene_load_texture(scene, 1, 1);;
 	scene->scene_list = create_clist();
+	scene->layers = 1;
+	scene->quad_tree = NULL;
+	scene->collision_iter = create_clist();
 
-	scene->scene_field = (CList**)calloc(scene->sizeWidth*scene->sizeHeight, sizeof(CList*));
+	scene->scene_field = (List**)calloc(scene_get_array_length(scene), sizeof(List*));
 
 	return scene;
 }
 
-SDL_Texture* ERPG_load_texture_scene(ERPG_Scene * scene, int width, int height)
+int scene_get_array_length(ERPG_Scene * scene)
+{
+	int x = scene->sizeWidth;
+	int y = scene->sizeHeight;
+
+	return x*y;
+}
+
+SDL_Texture* ERPG_scene_load_texture(ERPG_Scene *scene, int width, int height)
 {
 	ERPG_Window * win = ERPG_get_Window();
 
@@ -48,19 +74,37 @@ SDL_Texture* ERPG_load_texture_scene(ERPG_Scene * scene, int width, int height)
 	return texture;
 }
 
-void ERPG_set_tile_size_scene(ERPG_Scene * scene, int width, int height)
+void ERPG_scene_set_tile_size(ERPG_Scene *scene, int width, int height)
 {
-
+	scene->tileWidth = width;
+	scene->tileHeight = height;
 }
 
-void ERPG_set_size_scene(ERPG_Scene * scene, int width, int height)
+void ERPG_scene_set_layers(ERPG_Scene * scene, int layers)
 {
+	scene->layers = layers;
+}
+
+void ERPG_scene_set_size(ERPG_Scene *scene, int width, int height)
+{
+	ERPG_scene_remove_fields(scene);
+
 	scene->sizeWidth = width;
 	scene->sizeHeight = height;
-	scene->scene_field = (CList**)calloc(scene->sizeWidth*scene->sizeHeight, sizeof(CList*));
+
+	scene->scene_field = (List**)calloc(scene_get_array_length(scene), sizeof(List*));
+
+	if(scene->quad_tree)
+	{
+		ERPG_Quad_tree_destroy(scene->quad_tree);
+		free(scene->quad_tree);
+
+		scene->quad_tree = NULL;
+	}
+	scene->quad_tree = ERPG_quadtree_make(width*scene->tileWidth, height*scene->tileHeight);
 }
 
-void ERPG_set_bound_box_scene(ERPG_Scene * scene, SDL_Rect rect)
+void ERPG_scene_set_bound_box(ERPG_Scene *scene, SDL_Rect rect)
 {
 	if(scene->boundBoxSize.w == rect.w && scene->boundBoxSize.h == rect.h)
 	{
@@ -69,15 +113,24 @@ void ERPG_set_bound_box_scene(ERPG_Scene * scene, SDL_Rect rect)
 			SDL_DestroyTexture(scene->target);
 		}
 
-		scene->target = ERPG_load_texture_scene(scene, rect.w, rect.h);
+		scene->target = ERPG_scene_load_texture(scene, rect.w, rect.h);
 	}
 
 	scene->boundBoxSize = rect;
 }
 
+CList* ERPG_scene_get_list_objects(ERPG_Scene* scene, SDL_Rect bound_box)
+{
+	CList* list = create_clist();
+
+	ERPG_Quad_tree_retrieve(scene->quad_tree, bound_box, list);
+
+	return list;
+}
+
 int field_position1D(ERPG_Scene* scene, int x, int y)
 {
-	int maxW = scene->sizeWidth / scene->tileWidth;
+	int maxW = scene->sizeWidth;
 	int position = y * maxW + x;
 
 	return position;
@@ -91,7 +144,7 @@ int field_position1D(ERPG_Scene* scene, int x, int y)
 	return {x: newX, y: newY};
 }
 */
-void ERPG_add_field_object_scene(ERPG_Scene *scene, ERPG_Static_object *scene_object)
+ERPG_Static_object* ERPG_scene_add_field_object(ERPG_Scene *scene, ERPG_Static_object *scene_object)
 {
 	int x = scene_object->bound_box.x / scene->tileWidth;
 	int y = scene_object->bound_box.y / scene->tileHeight;
@@ -100,108 +153,110 @@ void ERPG_add_field_object_scene(ERPG_Scene *scene, ERPG_Static_object *scene_ob
 
 	if(position >= scene->sizeWidth*scene->sizeHeight)
 	{
-		return;
+		return NULL;
 	}
 
-	CList* field = scene->scene_field[position];
+	List* field = scene->scene_field[position];
 
 	if(!field) {
-		field = create_clist();
+		field = create_list();
 		scene->scene_field[position] = field;
 	}
 
-	add_cnode(field, scene_object);
+	return (ERPG_Static_object*)add_int_node(field, scene_object->layer ,scene_object);
 }
 
-void ERPG_add_list_object_scene(ERPG_Scene *scene, ERPG_Static_object *scene_object)
+void ERPG_scene_add_list_object(ERPG_Scene *scene, ERPG_Static_object *scene_object)
 {
 	CList* list = scene->scene_list;
 	add_cnode(list, scene_object);
+
+	ERPG_Quad_tree_insert(scene->quad_tree, scene_object);
 }
 
-ERPG_Scene_object * ERPG_remove_field_object_scene(ERPG_Scene * scene, ERPG_Static_object *scene_object)
+ERPG_Static_object * ERPG_scene_remove_field_object(ERPG_Scene *scene, ERPG_Static_object *scene_object)
 {
 	int x = scene_object->bound_box.x / scene->tileWidth;
 	int y = scene_object->bound_box.y / scene->tileHeight;
 
 	int position = field_position1D(scene, x, y);
 
-	if(position >= scene->sizeWidth*scene->sizeHeight)
+	if(position >= scene_get_array_length(scene))
 	{
 		return 0;
 	}
 
-	CList* field = scene->scene_field[position];
+	List* field = scene->scene_field[position];
 
 	if(field) {
-		if(remove_cnode_by_pointer(field, scene_object))
+		if(remove_int_node(field, scene_object->layer))
 		{
-			ERPG_destroy_so(scene_object);
+			ERPG_so_destroy(scene_object);
+			return scene_object;
 		}
 	}
 
 	return 0;
 }
 
-ERPG_Scene_object * ERPG_remove_field_index_scene(ERPG_Scene *scene, int id)
+ERPG_Scene_object * ERPG_scene_remove_field_index(ERPG_Scene *scene, int id)
 {
 	return 0;
 }
 
-ERPG_Scene_object * ERPG_remove_list_object_scene(ERPG_Scene *scene, ERPG_Static_object *scene_object)
+ERPG_Scene_object * ERPG_scene_remove_list_object(ERPG_Scene *scene, ERPG_Static_object *scene_object)
 {
-	remove_cnode_by_pointer(scene, scene_object);
-	if(remove_cnode_by_pointer(scene, scene_object)) {
-		ERPG_destroy_so(scene_object);
+	if(remove_cnode_by_pointer(scene->scene_list, scene_object)) {
+		ERPG_so_destroy(scene_object);
 	}
 
-	return 0;
+	ERPG_Quad_tree_remove(scene->quad_tree, scene_object);
 }
 
-ERPG_Scene_object * ERPG_remove_list_index_scene(ERPG_Scene *scene, int index)
+ERPG_Scene_object * ERPG_scene_remove_list_index(ERPG_Scene *scene, int index)
 {
 	return 0;
 }
 
-void ERPG_print_sprite_scene(ERPG_Scene* scene, ERPG_Static_object * scene_object)
+void ERPG_scene_print_sprite(ERPG_Scene *scene, ERPG_Static_object *scene_object)
 {
-	int tmpX = scene_object->sprite->destination.x;
-	int tmpY = scene_object->sprite->destination.y;
-
 	scene_object->sprite->destination.x = scene_object->bound_box.x - scene->boundBoxSize.x;
 	scene_object->sprite->destination.y = scene_object->bound_box.y - scene->boundBoxSize.y;
 
 	ERPG_copy_sprite_to_renderer(scene_object->sprite);
-
-	scene_object->sprite->destination.x = tmpX;
-	scene_object->sprite->destination.y = tmpY;
 }
 
-void ERPG_print_list_scene(ERPG_Scene* scene)
+void ERPG_scene_print_list(ERPG_Scene *scene)
 {
 	CList* list = scene->scene_list;
-	for(int z = 0; z < cnode_length(list); z++)
+	CList* render_list = create_clist();
+	ERPG_Quad_tree_retrieve(scene->quad_tree, scene->boundBoxSize, render_list);
+
+	for(int z = 0; z < cnode_length(render_list); z++)
 	{
-		ERPG_Static_object * sobj = get_cnode(list, z);
+		ERPG_Static_object * sobj =(ERPG_Static_object*) get_cnode(list, z);
 
 		if(sobj && sobj->sprite)
 		{
 			SDL_Rect rect;
 			if(SDL_IntersectRect(&scene->boundBoxSize, &sobj->bound_box, &rect)){
-				ERPG_print_sprite_scene(scene, sobj);
+				ERPG_scene_print_sprite(scene, sobj);
 			}
 		}
 	}
+
+	remove_clist(render_list);
+	free(render_list);
 }
 
-CList* ERPG_get_field_object_scene(ERPG_Scene * scene, int x_arg, int y_arg)
+List* ERPG_scene_get_field_object(ERPG_Scene *scene, int x_arg, int y_arg)
 {
 	int x = x_arg / scene->tileWidth;
 	int y = y_arg / scene->tileHeight;
 
 	int position = field_position1D(scene, x, y);
 
-	if(position >= scene->sizeWidth*scene->sizeHeight)
+	if(position >= scene_get_array_length(scene))
 	{
 		return 0;
 	}
@@ -209,7 +264,7 @@ CList* ERPG_get_field_object_scene(ERPG_Scene * scene, int x_arg, int y_arg)
 	return scene->scene_field[position];
 }
 
-void ERPG_draw_scene(ERPG_Scene * scene)
+void ERPG_scene_draw(ERPG_Scene *scene)
 {
 	int minX = scene->boundBoxSize.x/scene->tileWidth;
 	int minY = scene->boundBoxSize.y/scene->tileHeight;
@@ -219,28 +274,33 @@ void ERPG_draw_scene(ERPG_Scene * scene)
 	SDL_Texture * texture = scene->target;
 	ERPG_prepare_target_texture(texture);
 
-	for(int y = minY; y < maxHeight && y < scene->sizeHeight/scene->tileHeight; y++)
+	for(int y = minY; y < maxHeight && y < scene->sizeHeight; y++)
 	{
-		for(int x = minX; x < maxWidth && x < scene->sizeWidth/scene->tileWidth ; x++)
+		for(int x = minX; x < maxWidth && x < scene->sizeWidth ; x++)
 		{
 			int newX = field_position1D(scene, x, y);
-			CList* list = scene->scene_field[newX];
+			if(newX >= scene_get_array_length(scene))
+			{
+				printf("huh alert %d \n", newX);
+			}
+
+			List* list = scene->scene_field[newX];
 			if(!list)
 			{
 				continue;
 			}
-			for(int z = 0; z < cnode_length(list); z++)
+			for(int z = 0; z < scene->layers; z++)
 			{
-				ERPG_Static_object * sobj = get_cnode(list, z);
+				ERPG_Static_object * sobj = get_static_object(list_int_search_node(list, z));
 
 				if(sobj && sobj->sprite)
 				{
-					ERPG_print_sprite_scene(scene, sobj);
+					ERPG_scene_print_sprite(scene, sobj);
 				}
 			}
 		}
 	}
-	ERPG_print_list_scene(scene);
+	ERPG_scene_print_list(scene);
 
 	ERPG_Sprite * sprite = ERPG_create_target_texture(texture);
 	ERPG_copy_sprite_to_renderer(sprite);
@@ -248,41 +308,125 @@ void ERPG_draw_scene(ERPG_Scene * scene)
 	free(sprite);
 }
 
-void ERPG_destroy_scene(ERPG_Scene * scene)
+void ERPG_scene_remove_fields(ERPG_Scene* scene)
 {
-
+	for(int x = 0; x < scene_get_array_length(scene); x++)
+	{
+		List* list = scene->scene_field[x];
+		if(list)
+			destroy_int_list(list);
+		free(list);
+		scene->scene_field[x] = NULL;
+	}
+	free(scene->scene_field);
+	scene->scene_field = NULL;
 }
 
-SDL_bool ERPG_is_scene_collision(ERPG_Scene * scene, SDL_Rect bound_box, SDL_Rect* rect_out)
+void ERPG_scene_destroy(ERPG_Scene *scene)
 {
-	for(int y = 0; y < scene->sizeHeight/scene->tileHeight; y++) {
-		for (int x = 0; x < scene->sizeWidth / scene->tileWidth; x++) {
+	ERPG_scene_remove_fields(scene);
+	remove_clist(scene->scene_list);
+	free(scene->scene_list);
+	scene->scene_list = NULL;
+	ERPG_Quad_tree_destroy(scene->quad_tree);
+	free(scene->quad_tree);
+	scene->quad_tree = NULL;
+
+	if(scene->target)
+	{
+		SDL_DestroyTexture(scene->target);
+	}
+
+	if(collision_iter)
+	{
+		//remove_clist(collision_iter);
+		//free(collision_iter);
+	}
+
+	remove_clist(scene->collision_iter);
+	free(scene->collision_iter);
+}
+
+
+CList* scene_collide_list(CList* list, SDL_Rect bound_box,CList* out_list)
+{
+	CNode* node = list->root;
+
+	while(node)
+	{
+		ERPG_Static_object* sobj = (ERPG_Static_object*)node->value;
+		SDL_Rect rect_out;
+
+		if(SDL_IntersectRect(&sobj->bound_box, &bound_box, &rect_out))
+		{
+			add_cnode(out_list, sobj);
+		}
+
+		node = node->next;
+	}
+
+	return out_list;
+}
+
+SDL_bool ERPG_scene_is_dynamic_collision(ERPG_Scene* scene, SDL_Rect bound_box, CList* list_out)
+{
+	CList* list = create_clist();
+	ERPG_Quad_tree_retrieve(scene->quad_tree, bound_box, list);
+
+	scene_collide_list(list, bound_box, list_out);
+	remove_clist(list);
+	free(list);
+}
+
+CList* ERPG_scene_is_collision(ERPG_Scene *scene, SDL_Rect bound_box, SDL_Rect *rect_out)
+{
+	int minX = bound_box.x/scene->tileWidth;
+	int minY = bound_box.y/scene->tileHeight;
+	int maxX = minX + (bound_box.w/scene->tileWidth)+2;
+	int maxY = minY + (bound_box.h/scene->tileHeight)+2;
+
+	if(minX < 0)
+		minX = 0;
+	if(minY < 0)
+		minY = 0;
+	if(maxX < 0)
+		maxX = 0;
+	if(maxY < 0)
+		maxY = 0;
+
+	CList* collisions = create_clist();
+	ERPG_scene_is_dynamic_collision(scene, bound_box, collisions);
+
+	for(int y = minY; y < maxY && y < scene->sizeHeight; y++) {
+		for (int x = minX; x < maxX && x < scene->sizeWidth; x++) {
 			int newX = field_position1D(scene, x, y);
-			CList *list = scene->scene_field[newX];
+			List *list = scene->scene_field[newX];
 			if (!list) {
 				continue;
 			}
-			for (int z = 1; z < cnode_length(list); z++) {
-				ERPG_Static_object *sobj = get_cnode(list, z);
-				SDL_bool result = SDL_IntersectRect(&sobj->bound_box,
-				                                    &bound_box,
-				                                    rect_out);
-				if(result)
+			for (int z = 1; z < list_get_length(list); z++) {
+				ERPG_Static_object * sobj = get_static_object(list_int_search_node(list, z));
+				if(sobj)
 				{
-					return result;
+					SDL_bool result = SDL_IntersectRect(&sobj->bound_box,
+					                                    &bound_box,
+					                                    rect_out);
+					if(result){
+						add_cnode(collisions, sobj);
+					}
 				}
 			}
 		}
 	}
 
-	return SDL_FALSE;
+	return collisions;
 }
 
 int Lua_Scene(lua_State * L)
 {
 	ERPG_Scene * lua_scene = lua_newuserdata(L, sizeof(ERPG_Scene));
 
-	ERPG_Scene * scene = ERPG_make_scene();
+	ERPG_Scene * scene = ERPG_scene_make();
 
 	memcpy(lua_scene, scene, sizeof(ERPG_Scene));
 
@@ -293,17 +437,81 @@ int Lua_Scene(lua_State * L)
 	return 1;
 }
 
+int Scene_list_iter (lua_State *L) {
+	if(collision_node)
+	{
+		collision_element++;
+		lua_pushnumber(L, collision_element);
+
+		ERPG_Static_object* collision = (ERPG_Static_object*)collision_node->value;
+		lua_rawgeti(L, LUA_REGISTRYINDEX, collision->lua_registry);
+
+		collision_node = collision_node->next;
+	}
+	else
+	{
+		lua_pushnil(L);
+		lua_pushnil(L);
+	}
+
+	return 2;
+}
+
+int Lua_scene_get_collision_iter (lua_State *L) {
+	ERPG_Scene * scene = lua_touserdata(L, 1);
+	SDL_Rect rect = Lua_from_create_rect_static(L, 2);
+	SDL_Rect rect_out;
+
+	if(collision_iter)
+	{
+		remove_clist(collision_iter);
+		free(collision_iter);
+		collision_iter = NULL;
+	}
+
+	collision_iter = ERPG_scene_is_collision(scene, rect, &rect_out);
+	collision_node = collision_iter->root;
+	collision_element = 1;
+
+	lua_pushcclosure(L, Scene_list_iter, 0);
+
+	return 1;
+}
+
 int Lua_is_scene_collision(lua_State * L)
 {
 	ERPG_Scene * scene = lua_touserdata(L, 1);
 	SDL_Rect rect = Lua_from_create_rect_static(L, 2);
 	SDL_Rect rect_out;
-	SDL_bool result = ERPG_is_scene_collision(scene, rect, &rect_out);
+	CList* list = ERPG_scene_is_collision(scene, rect, &rect_out);
+	CNode* node = list->root;
 
-	rect_to_table(L, &rect_out);
-	lua_pushnumber(L, result);
+	lua_newtable(L);
+	if(list) {
+		int i = 0;
+		while(node){
+			ERPG_Static_object * static_object = (ERPG_Static_object*) get_cnode(list, i);
 
-	return 2;
+			if(static_object)
+			{
+				lua_rawgeti(L, LUA_REGISTRYINDEX, static_object->lua_registry);
+				lua_rawseti(L, -2, i+1);
+				i++;
+			}
+			node = node->next;
+		}
+
+		remove_clist(list);
+		free(list);
+	}
+
+	return 1;
+}
+
+int Lua_set_tile_size_scene(lua_State * L)
+{
+	ERPG_scene_set_tile_size(lua_touserdata(L, 1), lua_tointeger(L, 2), lua_tointeger(L, 3));
+	return 0;
 }
 
 int Lua_set_bound_box_scene(lua_State * L)
@@ -316,7 +524,7 @@ int Lua_set_bound_box_scene(lua_State * L)
 
 	SDL_Rect rect = {x : x, y: y, w: w, h: h};
 
-	ERPG_set_bound_box_scene(scene, rect);
+	ERPG_scene_set_bound_box(scene, rect);
 
 	return 0;
 }
@@ -326,9 +534,14 @@ int Lua_add_field_object_scene(lua_State * L)
 	ERPG_Scene * scene = lua_touserdata(L, 1);
 	ERPG_Static_object* static_object = lua_touserdata(L, 2);
 
-	ERPG_add_field_object_scene(scene, static_object);
+	ERPG_Static_object * old = ERPG_scene_add_field_object(scene, static_object);
 
-	return 0;
+	if(old)
+		lua_rawgeti(L, LUA_REGISTRYINDEX, old->lua_object_ref);
+	else
+		lua_pushnil(L);
+
+	return 1;
 }
 
 int Lua_add_list_object_scene(lua_State * L)
@@ -336,7 +549,8 @@ int Lua_add_list_object_scene(lua_State * L)
 	ERPG_Scene * scene = lua_touserdata(L, 1);
 	ERPG_Static_object* static_object = lua_touserdata(L, 2);
 
-	ERPG_add_list_object_scene(scene, static_object);
+	ERPG_scene_add_list_object(scene, static_object);
+
 
 	return 0;
 }
@@ -344,9 +558,13 @@ int Lua_add_list_object_scene(lua_State * L)
 int Lua_remove_field_object_scene(lua_State * L)
 {
 	ERPG_Scene * scene = lua_touserdata(L, 1);
-	ERPG_Static_object* static_object = lua_touserdata(L, 2);
+	ERPG_Static_object* static_object = Lua_Static_object_check(L, 2);
 
-	ERPG_remove_field_object_scene(scene, static_object);
+	if(ERPG_scene_remove_field_object(scene, static_object))
+	{
+		luaL_unref(L, LUA_REGISTRYINDEX, static_object->lua_registry);
+		static_object->lua_registry = LUA_REFNIL;
+	}
 
 	return 0;
 }
@@ -354,9 +572,19 @@ int Lua_remove_field_object_scene(lua_State * L)
 int Lua_remove_list_object_scene(lua_State * L)
 {
 	ERPG_Scene * scene = lua_touserdata(L, 1);
-	ERPG_Static_object* static_object = lua_touserdata(L, 2);
+	ERPG_Static_object* static_object = Lua_Static_object_check(L, 2);
 
-	ERPG_remove_list_object_scene(scene, static_object);
+	ERPG_scene_remove_list_object(scene, static_object);
+
+	luaL_unref(L, LUA_REGISTRYINDEX, static_object->lua_registry);
+	static_object->lua_registry = LUA_REFNIL;
+
+	return 0;
+}
+
+int Lua_scene_set_layers(lua_State * L)
+{
+	ERPG_scene_set_layers(lua_touserdata(L, 1), lua_tointeger(L, 2));
 
 	return 0;
 }
@@ -368,20 +596,45 @@ int Lua_set_size_scene(lua_State * L)
 	int w = lua_tonumber(L, 2);
 	int h = lua_tonumber(L, 3);
 
-	ERPG_set_size_scene(scene, w, h);
+	ERPG_scene_set_size(scene, w, h);
 
 	return 0;
+}
+
+int Lua_scene_get_list_objects(lua_State* L)
+{
+	ERPG_Scene* scene = lua_touserdata(L, 1);
+	SDL_Rect rect = Lua_from_create_rect_static(L, 2);
+
+	CList* list = ERPG_scene_get_list_objects(scene, rect);
+
+	lua_newtable(L);
+	if(list) {
+		for (int i = 0; i < get_clist_length(list); i++) {
+			ERPG_Static_object * static_object = (ERPG_Static_object*) get_cnode(list, i);
+			if(static_object)
+			{
+				lua_rawgeti(L, LUA_REGISTRYINDEX, static_object->lua_registry);
+				lua_rawseti(L, -2, i+1);
+			}
+		}
+
+		remove_clist(list);
+		free(list);
+	}
+
+	return 1;
 }
 
 int Lua_get_field_object_scene(lua_State * L)
 {
 	ERPG_Scene * scene = lua_touserdata(L, 1);
-	CList* list = ERPG_get_field_object_scene(scene, lua_tonumber(L, 2), lua_tonumber(L, 3));
+	List* list = ERPG_scene_get_field_object(scene, lua_tonumber(L, 2), lua_tonumber(L, 3));
 
 	lua_newtable(L);
 	if(list) {
-		for (int i = 0; i < cnode_length(list); i++) {
-			ERPG_Static_object* static_object = get_cnode(list, i);
+		for (int i = 0; i < list_get_length(list); i++) {
+			ERPG_Static_object * static_object = get_static_object(list_int_search_node(list, i));
 			if(static_object)
 			{
 				lua_rawgeti(L, LUA_REGISTRYINDEX, static_object->lua_registry);
@@ -393,9 +646,27 @@ int Lua_get_field_object_scene(lua_State * L)
 	return 1;
 }
 
+int Lua_scene_set_so_bound_box(lua_State * L)
+{
+	ERPG_Scene* scene = lua_touserdata(L, 1);
+	ERPG_Static_object* static_object = Lua_Static_object_check(L, 2);
+	SDL_Rect rect = Lua_from_create_rect_static(L, 3);
+	if(ERPG_Quad_tree_remove(scene->quad_tree, static_object))
+	{
+		ERPG_so_set_bound_box(static_object, rect);
+		ERPG_Quad_tree_insert(scene->quad_tree, static_object);
+	}
+	else
+	{
+		printf("Cannot find element in quad tree \n");
+	}
+
+	return 0;
+}
+
 int Lua_draw_scene(lua_State * L)
 {
-	ERPG_draw_scene(lua_touserdata(L, 1));
+	ERPG_scene_draw(lua_touserdata(L, 1));
 
 	return 0;
 }
@@ -404,7 +675,39 @@ int Lua_Scene_gc(lua_State * L)
 {
 	ERPG_Scene * scene = lua_touserdata(L, 1);
 
-	//ERPG_destroy_scene(scene);
+	for(int x = 0; x < get_clist_length(scene->scene_list); x++)
+	{
+		ERPG_Static_object* sobj = (ERPG_Static_object*)get_cnode(scene->scene_list, x);
+
+		if(sobj)
+		{
+			Lua_static_object_unref(L, sobj);
+			luaL_unref(L, LUA_REGISTRYINDEX, sobj->lua_registry);
+			sobj->lua_registry = LUA_REFNIL;
+		}
+	}
+
+	for(int x = 0; x < scene_get_array_length(scene); x++)
+	{
+		List* list = scene->scene_field[x];
+		if(!list)
+		{
+			continue;
+		}
+		for(int z = 0; z < scene->layers; z++)
+		{
+			ERPG_Static_object * sobj = get_static_object(list_int_search_node(list, z));
+
+			if(sobj)
+			{
+				Lua_static_object_unref(L, sobj);
+				luaL_unref(L, LUA_REGISTRYINDEX, sobj->lua_registry);
+				sobj->lua_registry = LUA_REFNIL;
+			}
+		}
+	}
+
+	ERPG_scene_destroy(scene);
 
 	return 0;
 }
@@ -421,6 +724,11 @@ int luaopen_ERPG_scene(lua_State * L)
 			{"removeFieldObject", Lua_remove_field_object_scene},
 			{"removeListObject", Lua_remove_list_object_scene},
 			{"getFieldObject", Lua_get_field_object_scene},
+			{"setTileSize", Lua_set_tile_size_scene},
+			{"setLayers", Lua_scene_set_layers},
+			{"getListObjects", Lua_scene_get_list_objects},
+			{"getCollisionIter", Lua_scene_get_collision_iter},
+			{"setSceneObjBoundBox", Lua_scene_set_so_bound_box},
 			{NULL, NULL}
 	};
 

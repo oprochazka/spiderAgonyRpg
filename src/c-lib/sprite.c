@@ -138,7 +138,6 @@ int load_texture_to_sprite(ERPG_Sprite * sprite, SDL_Texture * surface, char * p
     sprite->texture = surface;
   }
   else {
-    ERPG_List_img * save = (ERPG_List_img*)malloc(sizeof(ERPG_List_img));
     loadedSurface = load_surface(path);
     
     if(!loadedSurface){
@@ -157,6 +156,7 @@ int load_texture_to_sprite(ERPG_Sprite * sprite, SDL_Texture * surface, char * p
 	    
     sprite->texture = newTexture;
     if(newTexture){
+      ERPG_List_img * save = (ERPG_List_img*)malloc(sizeof(ERPG_List_img));
       char * path_alloc = (char*)malloc(sizeof(char)*strlen(path)+1);
       strcpy(path_alloc, path);
       save->surface = loadedSurface;
@@ -166,15 +166,7 @@ int load_texture_to_sprite(ERPG_Sprite * sprite, SDL_Texture * surface, char * p
       sprite->path = path_alloc;	
     }
 
-    //    SDL_FreeSurface(loadedSurface);
   }
-
-  /*
-  if(clip_rect)
-    SDL_FreeSurface(loadedSurface);
-  */   
- 
-  // sprite->texture = newTexture;
     
   return 1;
 }
@@ -363,8 +355,6 @@ void ERPG_sprite_destroy(ERPG_Sprite * sprite)
   if(sprite->surface_clip_rect)
     free(sprite->surface_clip_rect);
 
-  
-  
   // free(sprite->path);
 }
 
